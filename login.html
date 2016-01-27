@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>FoodBack</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="page-header">
+        <h1><strong>Log In</strong></h1>      
+      </div>    
+      <br>
+    
+      <form role="form">
+        <div class="form-group">
+          <input type="email" class="form-control" id="email" placeholder="Enter email">
+        </div>
+
+        <div class="form-group">
+          <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+        </div>
+
+        <div class="checkbox">
+          <label><input type="checkbox"> Remember me</label>
+        </div>
+
+        <div class="btn-group btn-group-justified">
+          <a href="login.html" class="btn btn-success">Forgot Password</a>
+          <a href="map.html" class="btn btn-success"><span class="glyphicon glyphicon-arrow-right"></span></a>
+        </div>
+      </form>
+      <br>
+
+      <div class="row">
+        <div class="col-sm-12 text-center"><h1><small>OR<small></h1></div>
+      </div>
+      <br>
+
+      <button class="btn btn-default btn-block facebookButton" onclick="window.location.href='map.html'">
+        Login With Facebook <i class="fa fa-facebook-square"></i>
+      </button>
+      <button class="btn btn-default btn-block twitterButton" onclick="window.location.href='map.html'">
+        Login With Twitter <i class="fa fa-twitter-square"></i>
+      </button>
+      <br>
+
+    </div>
+
+  </body>
+</html>

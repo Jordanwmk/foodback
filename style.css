@@ -1,0 +1,96 @@
+.carousel-inner > .item > img, 
+.carousel-inner > .item > a > img {
+    width: 100%;
+    margin: auto;
+    
+}
+
+html, body{
+    margin:0px;
+    padding:0px;
+    height: 100%;
+}
+
+.navbar { 
+    margin-bottom: -20px; 
+}
+
+.twitterButton{
+	color:white;
+	background-color:#55acee;
+}
+
+.facebookButton{
+	color:white;
+	background-color:#385490;
+}
+
+.navbar .navbar-form{
+    padding:0px ;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.profileLogo{
+	font-size: 28px;
+}
+
+#searchInput {
+    -webkit-transition: width 1s ease;
+    -moz-transition: width 1s ease;
+    -o-transition: width 1s ease;
+    transition: width 1s ease;   
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 0px;
+}
+
+#searchInput.in {
+    width: 220px;
+}
+
+#map{
+	height:79%;
+}
+
+.sharpButton{
+	border-radius: 0;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+.voteArrow{
+	font-size:25px;
+}
+
+.tabWidth{
+    width:25%;
+}
+
+.floating-action-button{
+	background-color:#5cb85c;
+	border-radius:50%;
+	width:50px;
+	height:50px;
+	text-align:center;
+	margin:10px;
+	font-size:35px;
+	color:whitesmoke;
+}
+
+.noPadding{
+	padding:0px;
+}
+
+.noMargin{
+	margin:0px;
+}
+
+style="background-color:lavenderblush;"
