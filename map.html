@@ -11,76 +11,31 @@
 		<link rel="stylesheet" href="simple-sidebar.css" >
 
 		<title>FoodBack</title>
-
-		<div class="container-fluid noPadding">
-			<div class="row well well-sm noMargin sharpButton">
-				<div class="col-xs-6 pull-left;">
-					<img src="foodbackLogo2.png" class="img-responsive" style="max-height:60px;"/>
-				</div>
-				<div class="col-xs-6">
-					<i id="menu-toggle" class="fa fa-bars pull-right optionsButton img-responsive"></i>
-				</div>
-			</div>
-		</div>
-
-
-		<div id="wrapper">
-		
-			<!-- Sidebar -->
-			<div id="sidebar-wrapper">
-				<ul class="sidebar-nav">
-					<li>
-						<a href="#"><i class="fa fa-search"></i>&nbsp&nbsp&nbspSearch</a>
-					</li>
-					<li>
-						<a href="#"><i class="fa fa-user"></i>&nbsp&nbsp&nbspProfile</a>
-					</li>
-					<li>
-						<a href="#"><i class="fa fa-comment"></i>&nbsp&nbsp&nbspNews Feed</a>
-					</li>
-					<li>
-						<a href="#"><i class="fa fa-map-marker"></i>&nbsp&nbsp&nbspNearby Places</a>
-					</li>
-					<li>
-						<a href="#"><i class="fa fa-info-circle"></i>&nbsp&nbsp&nbspAbout Us</a>
-					</li>
-					<li>
-						<a href="#"><i class="fa fa-sign-out"></i>&nbsp&nbsp&nbspLog Out</a>
-					</li>
-				</ul>
-			</div>
-
-		</div>
-
-
-		<!-- Menu Toggle Script -->
-		<script>
-		$("#menu-toggle").click(function(e) {
-			e.preventDefault();
-			$("#wrapper").toggleClass("toggled");
-		});
-		</script>
-    
 	</head>
 
 	<body>
+		<script>
+			//Script for inserting the side/navbar here
+			$.get( "http://foodback3.azurewebsites.net/wrapper.html", function( data ) {
+				var element=$.parseHTML(data);
+				$('body').prepend(element);
+
+				var dom = $(data);
+				dom.filter('script').each(function(){
+					$.globalEval(this.text || this.textContent || this.innerHTML || '');
+				});
+			});
+		</script>
+
 		<div class="container"></div>
 			<div id="map"></div>
 
 			<script>
-			function CenterControl(controlDiv, map) {
-			  controlDiv.addEventListener('click', function() {
-				window.location.href='newsfeed.html';
-			  });
-			}
-
-
 			 var map;
 			  function initMap() {
 				  var map = new google.maps.Map(document.getElementById('map'), {
 					center: {lat: 0, lng: 0},
 					zoom: 18,
-					disableDefaultUI:true
 				  });
 				  var infoWindow = new google.maps.InfoWindow({map: map});
 
@@ -103,16 +58,6 @@
 					handleLocationError(false, infoWindow, map.getCenter());
 				  }
 
-				  // Create the DIV to hold the control and call the CenterControl() constructor
-				  // passing in this DIV.
-				  var centerControlDiv = document.createElement('div');
-				  centerControlDiv.className='floating-action-button';
-				  centerControlDiv.innerHTML='<i class="fa fa-book"></i>';
-				  var centerControl = new CenterControl(centerControlDiv, map);
-
-				  centerControlDiv.index = 1;
-				  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(centerControlDiv);
-
 				}
 
 				function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -121,9 +66,9 @@
 										'Error: The Geolocation service failed.' :
 										'Error: Your browser doesn\'t support geolocation.');
 				}
-
 			</script>
 			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpBd2lvpU8DbDS9tydPHMS2xGP-9jsDLU&signed_in=true&libraries=places&callback=initMap" async defer></script>
+		
 		</div>
 	</body>
 </html>
