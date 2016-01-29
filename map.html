@@ -1,165 +1,129 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-    <title>FoodBack</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="simple-sidebar.css" >
 
-    <div class="row well well-sm noMargin " >
-        	<div class="col-xs-2 noPadding">
-				<button id="srchButton" type="button" class="btn btn-success" data-toggle="collapse" data-target="#searchInput">
-				  <span class="glyphicon glyphicon-search"></span>
-				</button>
-        	</div>
+		<title>FoodBack</title>
 
-        	<div class="col-xs-8 noPadding">
-				<img src="navbarLogo.png" class="img-responsive center-block" onclick="window.location.href='map.html'"/>
-        	</div>
-
-        	<div class="col-xs-2 profileLogo noPadding">
-				<span class="glyphicon glyphicon-user pull-right" onclick="window.location.href='profile.html'"></span>
-        	</div>
-        </div>
-		
-		<div id="searchInput" class="collapse" style="margin:0px; padding:0px; display:none; width:100%;">
-			<form class="form-horizontal" role="form">
-				<div class="form-group has-feedback">
-			  			<div class="col-sm-10">
-			  				<div class="input-group">
-								<input type="text" class="form-control" id="srch" placeholder="Search">
-									<span class="input-group-addon">
-										<span class="glyphicon glyphicon-plus" id="addNewPlace"></span>
-									</span>
-							</div>
-						</div>
-					</div>
+		<div class="container-fluid noPadding">
+			<div class="row well well-sm noMargin sharpButton">
+				<div class="col-xs-6 pull-left;">
+					<img src="foodbackLogo2.png" class="img-responsive" style="max-height:60px;"/>
 				</div>
-			</form>
-		</div>
-		
-		  <!-- Modal -->
-		<div class="modal fade" id="addPlace" role="dialog">
-			<div class="modal-dialog">
-
-			  <!-- Modal content-->
-				<div class="modal-content">
-					<div class="modal-header">
-				  	<button type="button" class="close" data-dismiss="modal">&times;</button>
-				  		<h4 class="modal-title">Register a new food place</h4>
-					</div>
-					<div class="modal-body">
-						<div class="form-group">
-						  <label for="businessName">Name of business:</label>
-						  <input type="businessName" class="form-control" id="businessName" placeholder="Enter name">
-						</div>
-						<div class="form-group">
-						  <label for="businessAddress">Address of business:</label>
-						  <input type="businessAddress" class="form-control" id="businessAddress" placeholder="Enter address">
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Register</button>
-				  		<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-					</div>
-			  	</div>
-			  </div>
+				<div class="col-xs-6">
+					<i id="menu-toggle" class="fa fa-bars pull-right optionsButton img-responsive"></i>
+				</div>
 			</div>
 		</div>
+
+
+		<div id="wrapper">
 		
+			<!-- Sidebar -->
+			<div id="sidebar-wrapper">
+				<ul class="sidebar-nav">
+					<li>
+						<a href="#"><i class="fa fa-search"></i>&nbsp&nbsp&nbspSearch</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-user"></i>&nbsp&nbsp&nbspProfile</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-comment"></i>&nbsp&nbsp&nbspNews Feed</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-map-marker"></i>&nbsp&nbsp&nbspNearby Places</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-info-circle"></i>&nbsp&nbsp&nbspAbout Us</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-sign-out"></i>&nbsp&nbsp&nbspLog Out</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+
+		<!-- Menu Toggle Script -->
 		<script>
-			$("#srchButton").click(function() {
-				toggleSearch();
-			});
-
-			$("#addNewPlace").click(function(){
-				$("#addPlace").modal();
-			});
-
-			function toggleSearch(){
-				if (document.getElementById('searchInput').style.display=="none"){
-					document.getElementById('searchInput').style.display="block";
-				} else {
-					document.getElementById('searchInput').style.display="none";
-				}
-			}
-
-			
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
 		</script>
+    
 	</head>
 
-  <body>
-	<div class="container-fluid "></div>
-		<div id="map"></div>
+	<body>
+		<div class="container"></div>
+			<div id="map"></div>
 
-		<script>
-		function CenterControl(controlDiv, map) {
-		  controlDiv.addEventListener('click', function() {
-			window.location.href='newsfeed.html';
-		  });
-		}
-
-
-     	 var map;
-		  function initMap() {
-			  var map = new google.maps.Map(document.getElementById('map'), {
-				center: {lat: 0, lng: 0},
-				zoom: 18,
-				disableDefaultUI:true
+			<script>
+			function CenterControl(controlDiv, map) {
+			  controlDiv.addEventListener('click', function() {
+				window.location.href='newsfeed.html';
 			  });
-			  var infoWindow = new google.maps.InfoWindow({map: map});
+			}
 
-			  // Try HTML5 geolocation.
-			  if (navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(function(position) {
-				  var pos = {
-					lat: position.coords.latitude,
-					lng: position.coords.longitude
-				  };
 
+			 var map;
+			  function initMap() {
+				  var map = new google.maps.Map(document.getElementById('map'), {
+					center: {lat: 0, lng: 0},
+					zoom: 18,
+					disableDefaultUI:true
+				  });
+				  var infoWindow = new google.maps.InfoWindow({map: map});
+
+				  // Try HTML5 geolocation.
+				  if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(function(position) {
+					  var pos = {
+						lat: position.coords.latitude,
+						lng: position.coords.longitude
+					  };
+
+					  infoWindow.setPosition(pos);
+					  infoWindow.setContent('Location found.');
+					  map.setCenter(pos);
+					}, function() {
+					  handleLocationError(true, infoWindow, map.getCenter());
+					});
+				  } else {
+					// Browser doesn't support Geolocation
+					handleLocationError(false, infoWindow, map.getCenter());
+				  }
+
+				  // Create the DIV to hold the control and call the CenterControl() constructor
+				  // passing in this DIV.
+				  var centerControlDiv = document.createElement('div');
+				  centerControlDiv.className='floating-action-button';
+				  centerControlDiv.innerHTML='<i class="fa fa-book"></i>';
+				  var centerControl = new CenterControl(centerControlDiv, map);
+
+				  centerControlDiv.index = 1;
+				  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(centerControlDiv);
+
+				}
+
+				function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 				  infoWindow.setPosition(pos);
-				  infoWindow.setContent('Location found.');
-				  map.setCenter(pos);
-				}, function() {
-				  handleLocationError(true, infoWindow, map.getCenter());
-				});
-			  } else {
-				// Browser doesn't support Geolocation
-				handleLocationError(false, infoWindow, map.getCenter());
-			  }
+				  infoWindow.setContent(browserHasGeolocation ?
+										'Error: The Geolocation service failed.' :
+										'Error: Your browser doesn\'t support geolocation.');
+				}
 
-			  // Create the DIV to hold the control and call the CenterControl() constructor
-			  // passing in this DIV.
-			  var centerControlDiv = document.createElement('div');
-			  centerControlDiv.className='floating-action-button';
-			  centerControlDiv.innerHTML='<i class="fa fa-book"></i>';
-			  var centerControl = new CenterControl(centerControlDiv, map);
-
-			  centerControlDiv.index = 1;
-			  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(centerControlDiv);
-
-			}
-
-			function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-			  infoWindow.setPosition(pos);
-			  infoWindow.setContent(browserHasGeolocation ?
-									'Error: The Geolocation service failed.' :
-									'Error: Your browser doesn\'t support geolocation.');
-			}
-
-		</script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpBd2lvpU8DbDS9tydPHMS2xGP-9jsDLU&signed_in=true&libraries=places&callback=initMap" async defer></script>
-		
-  		<button class="btn btn-success btn-block">
-  			<p class="h2" style="margin:0px;" onclick="window.location.href='nearby.html'">
-  				<strong>Nearby Places </strong><span class="badge">2</span>
-  			</p>
-		</button>
-	</div>
-  </body>
+			</script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpBd2lvpU8DbDS9tydPHMS2xGP-9jsDLU&signed_in=true&libraries=places&callback=initMap" async defer></script>
+		</div>
+	</body>
 </html>

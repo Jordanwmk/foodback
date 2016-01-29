@@ -1,0 +1,48 @@
+<div class="container-fluid noPadding">
+			<div class="row well well-sm noMargin sharpButton">
+				<div class="col-xs-6 pull-left;">
+					<img src="foodbackLogo2.png" class="img-responsive" style="max-height:60px;"/>
+				</div>
+				<div class="col-xs-6">
+					<i id="menu-toggle" class="fa fa-bars pull-right optionsButton img-responsive"></i>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="wrapper">
+		
+			<!-- Sidebar -->
+			<div id="sidebar-wrapper">
+				<ul class="sidebar-nav">
+					<li>
+						<a href="#"><i class="fa fa-search"></i>&nbsp&nbsp&nbspSearch</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-user"></i>&nbsp&nbsp&nbspProfile</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-comment"></i>&nbsp&nbsp&nbspNews Feed</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-map-marker"></i>&nbsp&nbsp&nbspNearby Places</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-info-circle"></i>&nbsp&nbsp&nbspAbout Us</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-sign-out"></i>&nbsp&nbsp&nbspLog Out</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+
+		<!-- Menu Toggle Script -->
+		<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+		</script>
