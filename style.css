@@ -1,3 +1,8 @@
+.appBackground{
+	background-color:#F8F8FF;
+	height:100%;
+}
+
 .carousel { z-index: -9999999999999; } /* keeps this behind all content */
 
 .carousel .item {
@@ -125,6 +130,12 @@ html, body{
 
 .noMargin{
 	margin:0px;
+}
+
+.titlePadding{
+	padding:0px;
+	margin:0px;
+	margin-bottom:30px;
 }
 
 style="background-color:lavenderblush;"

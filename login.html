@@ -14,46 +14,46 @@
   </head>
 
   <body>
-    <div class="container-fluid">
-      <div class="page-header">
+    <div class="container appBackground">
+      <div class="page-header titlePadding">
         <h1><strong>Log In</strong></h1>      
       </div>    
-      <br>
     
       <form role="form">
         <div class="form-group">
-          <input type="email" class="form-control" id="email" placeholder="Enter email">
+       		<input type="email" class="form-control" id="email" placeholder="Enter email">
         </div>
 
         <div class="form-group">
-          <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+          	<input type="password" class="form-control" id="pwd" placeholder="Enter password">
         </div>
 
         <div class="checkbox">
-          <label><input type="checkbox"> Remember me</label>
-        </div>
-
-        <div class="btn-group btn-group-justified">
-          <a href="login.html" class="btn btn-success">Forgot Password</a>
-          <a href="map.html" class="btn btn-success"><span class="glyphicon glyphicon-arrow-right"></span></a>
+			<label class="checkbox-inline" >
+      			<input type="checkbox" value="">Remember me
+   		 	</label>
+          	<a href="#" class="btn btn-link pull-right" style="margin-top:-6px;">Forgot Password?</a>
         </div>
       </form>
-      <br>
 
-      <div class="row">
-        <div class="col-sm-12 text-center"><h1><small>OR<small></h1></div>
+      <a href="map.html" class="btn btn-success center-block">Login</a>
+
+      <div class="row noMargin">
+        <div class="col-sm-12 text-center noMargin"><h1><small>OR<small></h1></div>
       </div>
-      <br>
 
       <button class="btn btn-default btn-block facebookButton" onclick="window.location.href='map.html'">
         Login With Facebook <i class="fa fa-facebook-square"></i>
       </button>
+
       <button class="btn btn-default btn-block twitterButton" onclick="window.location.href='map.html'">
         Login With Twitter <i class="fa fa-twitter-square"></i>
       </button>
-      <br>
 
-    </div>
+
+      <button class="btn btn-warning btn-block" onclick="window.location.href='map.html'">Login as guest</button>
+
+   	</div>
 
   </body>
 </html>
