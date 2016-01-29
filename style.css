@@ -44,6 +44,10 @@
     z-index:2;
 }
 
+.carouselCaption{
+	font-size:18px;
+}
+
 html, body{
     margin:0px;
     padding:0px;
