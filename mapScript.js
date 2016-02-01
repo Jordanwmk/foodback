@@ -40,7 +40,7 @@ function initInfoWindow(){
 		map: map,
 		content: 'You are here'
 	});
-	infowindow.open(map, marker);
+	infoWindow.open(map, marker);
 }
 
 function initMarker(){
