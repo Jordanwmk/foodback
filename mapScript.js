@@ -30,8 +30,8 @@ function createMarker(place) {
 	});
 
 	google.maps.event.addListener(marker, 'click', function() {
-		infowindow.setContent(place.name);
-		infowindow.open(map, this);
+		infoWindow.setContent(place.name);
+		infoWindow.open(map, this);
 	});
 }
 
