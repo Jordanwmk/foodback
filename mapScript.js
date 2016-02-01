@@ -2,21 +2,6 @@ var myLatLng = {lat: -36.8576017, lng: 174.7590294};
 var image = 'here.png';
 var zoomAmount = 18;
 var map, marker, infoWindow;
-var map = new google.maps.Map(document.getElementById('map'), {
-	zoom: zoomAmount,
-	center: myLatLng
-});
-
-var marker = new google.maps.Marker({
-	position: myLatLng,
-	map: map,
-	icon: image
-});
-
-var infoWindow = new google.maps.InfoWindow({
-	map: map,
-	content: 'You are here'
-});
 
 function getFoodPlaces(){
 	var service = new google.maps.places.PlacesService(map);
