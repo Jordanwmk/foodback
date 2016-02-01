@@ -35,23 +35,6 @@ function createMarker(place) {
 	});
 }
 
-function removeLabels(){
-	var styles = [
-{
-    featureType: "road",
-    elementType: "geometry",
-  },{
-    featureType: "road",
-    elementType: "labels",
-    stylers: [
-      { visibility: "off" }
-    ]
-  }
-];
-	
-	map.setOptions({styles: styles});
-}
-
 function initInfoWindow(){
 	infoWindow = new google.maps.InfoWindow({
 		map: map,
@@ -76,7 +59,6 @@ function initMap() {
 	
 	initMarker();
 	initInfoWindow();
-	removeLabels();
 	getFoodPlaces();
 }
 
