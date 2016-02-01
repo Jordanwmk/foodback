@@ -11,9 +11,7 @@
 		<link rel="stylesheet" href="simple-sidebar.css" >
 
 		<title>FoodBack</title>
-	</head>
-
-	<body>
+		
 		<script>
 			//Script for inserting the side/navbar here
 			$.get("http://foodback3.azurewebsites.net/wrapper.html", function( data ) {
@@ -26,13 +24,14 @@
 				});
 			});
 		</script>
+	</head>
 
+	<body>
 		<div class="container"></div>
 			<div id="map"></div>
 			<script src="mapScript.js"></script>
 			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpBd2lvpU8DbDS9tydPHMS2xGP-9jsDLU&signed_in=true&libraries=places&callback=initMap" async defer>
 			</script>
-		
 		</div>
 	</body>
 </html>

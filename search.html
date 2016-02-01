@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="simple-sidebar.css" >
+
+		<title>FoodBack</title>
+		
+		<script>
+			//Script for inserting the side/navbar here
+			$.get("http://foodback3.azurewebsites.net/wrapper.html", function( data ) {
+				var element=$.parseHTML(data);
+				$('body').prepend(element);
+
+				var dom = $(data);
+				dom.filter('script').each(function(){
+					$.globalEval(this.text || this.textContent || this.innerHTML || '');
+				});
+			});
+		</script>
+	</head>
+
+    <body>
+        <div class="container-fluid appBackground">
+            <div class="row noPadding" style="padding-top:10px;">
+                <div class="col-xs-12">
+                    <div class="input-group col-xs-12">
+                        <input type="text" class="form-control input-lg" placeholder="Search" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-success btn-lg" type="button">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row noPadding" style="padding-top:10px;">
+                <div class="col-xs-12">
+                    <div class="page-header titlePadding">
+                        <div class="row row-eq-height">
+                            <div class="col-xs-9">
+                                <h3 class="noMargin"><strong>Filter Results</strong></h3>    
+                            </div>
+
+                            <div class="col-xs-3">
+                                <button class="btn btn-default" type="button" onclick="window.location.href='search.html'">
+                                    Reset
+                                </button>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
+            <div class="row noPadding">
+                <div class="col-xs-6">
+                    <h5>Type of food: </h5>
+                </div>
+
+                <div class="col-xs-6">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                        <span id="dropdown_title">Please choose one</span>
+                        <span class="caret"></span></button>
+                        <ul id="divNewNotifications" class="dropdown-menu">
+                            <li><a href="#">Mexican</a></li>
+                            <li><a href="#">Japanese</a></li>
+                            <li><a href="#">Italian</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row noPadding">
+                <div class="col-xs-6">
+                    <h5>Badge: </h5>
+                </div>
+
+                <div class="col-xs-6">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                        <span id="dropdown_title2">Please choose one</span>
+                        <span class="caret"></span></button>
+                        <ul id="divNewNotifications2" class="dropdown-menu">
+                            <li><a href="#">Bronze</a></li>
+                            <li><a href="#">Silver</a></li>
+                            <li><a href="#">Gold</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row noPadding">
+                <div class="col-xs-6">
+                    <h5>Sort by: </h5>
+                </div>
+
+                <div class="col-xs-6">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                        <span id="dropdown_title3">Please choose one</span>
+                        <span class="caret"></span></button>
+                        <ul id="divNewNotifications3" class="dropdown-menu">
+                            <li><a href="#">Distance</a></li>
+                            <li><a href="#">Badge level</a></li>
+                            <li><a href="#">Price</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="btn btn-success btn-block">
+                Search
+            </div>
+
+
+        </div>
+
+        <script>
+            $('.dropdown-toggle').dropdown();
+
+
+            $('#divNewNotifications li').on('click', function() {
+                $('#dropdown_title').html($(this).find('a').html());
+            });
+
+            $('#divNewNotifications2 li').on('click', function() {
+                $('#dropdown_title2').html($(this).find('a').html());
+            });
+
+            $('#divNewNotifications3 li').on('click', function() {
+                $('#dropdown_title3').html($(this).find('a').html());
+            });
+        </script>
+  </body>
+</html>
