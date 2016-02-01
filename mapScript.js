@@ -20,7 +20,7 @@ function createFoodMarker(results, status) {
 			createMarker(results[i]);
 		}
 	}
-}
+} 
 
 function createMarker(place) {
 	var placeLoc = place.geometry.location;
