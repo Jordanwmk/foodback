@@ -36,7 +36,7 @@ function createMarker(place) {
 }
 
 function initInfoWindow(){
-	var infoWindow = new google.maps.InfoWindow({
+	infoWindow = new google.maps.InfoWindow({
 		map: map,
 		content: 'You are here'
 	});
