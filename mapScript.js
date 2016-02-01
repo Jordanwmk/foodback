@@ -37,10 +37,26 @@ function createMarker(place) {
 
 function removeLabels(){
 	var styles = [
-		{
-			stylers: [{ visibility: "off" }]
-		}
-	];
+  {
+    stylers: [
+      { hue: "#00ffe6" },
+      { saturation: -20 }
+    ]
+  },{
+    featureType: "road",
+    elementType: "geometry",
+    stylers: [
+      { lightness: 100 },
+      { visibility: "simplified" }
+    ]
+  },{
+    featureType: "road",
+    elementType: "labels",
+    stylers: [
+      { visibility: "off" }
+    ]
+  }
+];
 	
 	map.setOptions({styles: styles});
 }
