@@ -16,7 +16,7 @@
 	<body>
 		<script>
 			//Script for inserting the side/navbar here
-			$.get( "http://foodback3.azurewebsites.net/wrapper.html", function( data ) {
+			$.get("http://foodback3.azurewebsites.net/wrapper.html", function( data ) {
 				var element=$.parseHTML(data);
 				$('body').prepend(element);
 
