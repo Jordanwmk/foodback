@@ -40,8 +40,8 @@ function createFoodMarker(results, status) {
 function createMarker(place) {
 	var placeLoc = place.geometry.location;
 	var marker = new google.maps.Marker({
-		position: place.geometry.location
-		map: map,
+		position: place.geometry.location,
+		map: map
 	});
 
 	google.maps.event.addListener(marker, 'click', function() {
