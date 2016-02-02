@@ -1,168 +1,93 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-    <title>FoodBack</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="simple-sidebar.css" >
 
-    <div class="row well well-sm noMargin " >
-        	<div class="col-xs-2 noPadding">
-				<button id="srchButton" type="button" class="btn btn-success" data-toggle="collapse" data-target="#searchInput">
-				  <span class="glyphicon glyphicon-search"></span>
-				</button>
-        	</div>
-
-        	<div class="col-xs-8 noPadding">
-				<img src="navbarLogo.png" class="img-responsive center-block" onclick="window.location.href='map.html'"/>
-        	</div>
-
-        	<div class="col-xs-2 profileLogo noPadding">
-				<span class="glyphicon glyphicon-user pull-right" onclick="window.location.href='profile.html'"></span>
-        	</div>
-        </div>
-		
-		<div id="searchInput" class="collapse" style="margin:0px; padding:0px; display:none; width:100%;">
-			<form class="form-horizontal" role="form">
-				<div class="form-group has-feedback">
-			  			<div class="col-sm-10">
-			  				<div class="input-group">
-								<input type="text" class="form-control" id="srch" placeholder="Search">
-									<span class="input-group-addon">
-										<span class="glyphicon glyphicon-plus" id="addNewPlace"></span>
-									</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</form>
-		</div>
-		
-		  <!-- Modal -->
-		<div class="modal fade" id="addPlace" role="dialog">
-			<div class="modal-dialog">
-
-			  <!-- Modal content-->
-				<div class="modal-content">
-					<div class="modal-header">
-				  	<button type="button" class="close" data-dismiss="modal">&times;</button>
-				  		<h4 class="modal-title">Register a new food place</h4>
-					</div>
-					<div class="modal-body">
-						<div class="form-group">
-						  <label for="businessName">Name of business:</label>
-						  <input type="businessName" class="form-control" id="businessName" placeholder="Enter name">
-						</div>
-						<div class="form-group">
-						  <label for="businessAddress">Address of business:</label>
-						  <input type="businessAddress" class="form-control" id="businessAddress" placeholder="Enter address">
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Register</button>
-				  		<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-					</div>
-			  	</div>
-			  </div>
-			</div>
-		</div>
+		<title>FoodBack</title>
 		
 		<script>
-			$("#srchButton").click(function() {
-				toggleSearch();
+			//Script for inserting the side/navbar here
+			$.get("http://foodback3.azurewebsites.net/wrapper.html", function( data ) {
+				var element=$.parseHTML(data);
+				$('body').prepend(element);
+
+				var dom = $(data);
+				dom.filter('script').each(function(){
+					$.globalEval(this.text || this.textContent || this.innerHTML || '');
+				});
 			});
-
-			$("#addNewPlace").click(function(){
-				$("#addPlace").modal();
-			});
-
-			function toggleSearch(){
-				if (document.getElementById('searchInput').style.display=="none"){
-					document.getElementById('searchInput').style.display="block";
-				} else {
-					document.getElementById('searchInput').style.display="none";
-				}
-			}
-
-			
 		</script>
 	</head>
 
-  <body>
-    <div class="container-fluid">
-		<div class="page-header">
-			<h2>
-			 <strong>Nearby Places </strong><span class="badge">2</span>
+    <body>
+        <div class="container-fluid appBackground">
+            <div class="page-header titlePadding">
+                <h3 class="noMargin"><strong>Nearby Places</strong></h3>
+                <h6 class="text-success"><strong>Found 2 nearby place(s)</strong></h6>
+            </div>
 
-             <!-- Trigger the modal with a button -->
-              <button type="button" class="btn btn-info pull-right" data-toggle="modal" data-target="#filterResults">
-				<span class="glyphicon glyphicon-filter"></span>
-              </button>
-
-              <!-- Modal -->
-              <div class="modal fade" id="filterResults" role="dialog">
-                <div class="modal-dialog">
-
-                  <!-- Modal content-->
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <h4 class="modal-title">Filter Results</h4>
-                    </div>
-
-                      <div class="panel-group">
-                        <div class="panel panel-default">
-                          <div class="panel-heading">Category</div>
-                          <div class="panel-body">
-                            <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Please select a food category
-                                <span class="caret"></span></button>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">School</a></li>
-                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Takeaway</a></li>
-                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sport Club</a></li>
-                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">School Food Zone</a></li>
-                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Hospital</a></li>
-                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Event</a></li>
-                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Supermarket</a></li>
-                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Community Food Zone</a></li>
-                                </ul>
-                        	</div>
+            <div class="panel panel-default">
+                <div class="panel-body noPadding">
+                    
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <img src="salad.jpg" class="img-responsive center-block"/>
                         </div>
-                      </div>
                     </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Apply</button>
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                  </div>
 
+                    <div class="row" style="padding-left:5px;">
+                        <div class="col-xs-6">
+                            <h5><strong>Habitual Fix</strong></h5>
+                        </div>
+
+                        <div class="col-xs-3">          
+                            <i class="fa fa-tint" style="padding-top:7px;"></i>
+                            <i class="fa fa-usd" style="padding-top:7px;"></i>
+                            <i class="fa fa-glass" style="padding-top:7px;"></i>
+                        </div>
+
+                        <div class="col-xs-3">          
+                            <h6><strong>2 min</strong></h6>
+                        </div>
+                    </div>
+                    
                 </div>
-              </div>
-			</h2>
-		</div>
+            </div>
 
-		<div class="list-group">
-			<a href="food1.html" class="list-group-item">
-			  <h1 class="list-group-item-heading">
-				<img src="salad.jpg" class="img-responsive center-block"/>
-			  </h1>
-			  <p class="list-group-item-text lead"><strong>Habitual Fix</strong></p>
-			</a>
+            <div class="panel panel-default">
+                <div class="panel-body noPadding">
+                    
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <img src="salad5.jpg" class="img-responsive center-block"/>
+                        </div>
+                    </div>
 
-			<a href="food1.html" class="list-group-item">
-			  <h1 class="list-group-item-heading">
-				<img src="pasta.jpg" class="img-responsive center-block"/>
-			  </h1>
-			  <p class="list-group-item-text lead"><strong>Le Cafe</strong></p>
-			</a>
-		  </div>
-    </div>
-  </body>
+                    <div class="row" style="padding-left:5px;">
+                        <div class="col-xs-6">
+                            <h5><strong>Le Cafe</strong></h5>
+                        </div>
+
+                        <div class="col-xs-3">          
+                            <i class="fa fa-tint" style="padding-top:7px;"></i>
+                            <i class="fa fa-glass" style="padding-top:7px;"></i>
+                        </div>
+
+                        <div class="col-xs-3">          
+                            <h6><strong>5 min</strong></h6>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </body>
 </html>
-
