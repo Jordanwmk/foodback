@@ -47,7 +47,7 @@ function initInfoWindow(){
 		content: 'You are here'
 	});
 	infoWindow.open(map, marker);
-	google.maps.event.addListener(infoWindow, 'click', loadFoodPage());
+	google.maps.event.addListener(infoWindow, 'click', loadFoodPage);
 }
 
 function initMarker(){
