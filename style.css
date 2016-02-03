@@ -1,6 +1,6 @@
 .appBackground{
 	background-color:#F8F8FF;
-	height:100%;
+	height:95%;
 }
 
 .carousel { z-index: -9999999999999; } /* keeps this behind all content */
@@ -148,6 +148,16 @@ html, body{
 
 .optionsButton{
 	font-size:30px;
+}
+
+#grad1 {
+    height: 10px;
+    background: yellow; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left, red , yellow,  green); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, red, yellow, green); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, red,yellow, green); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, red , yellow, green); /* Standard syntax (must be last) */
+    border-radius:5px;
 }
 
 style="background-color:lavenderblush;"
