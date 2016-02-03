@@ -28,7 +28,7 @@ function createMarker(place) {
 		position: place.geometry.location,
 		map: map
 	});
-	var infoWindowContent = '<a onclick=\"window.location.href=\'food.html\'\">' + place.name + '<br> 5 min away</a>';
+	var infoWindowContent = '<p onclick=\"window.location.href=\'food.html\'\">' + place.name + '<br> 5 min away</p>';
 
 	google.maps.event.addListener(marker, 'click', function() {
 		infoWindow.setContent(infoWindowContent);
