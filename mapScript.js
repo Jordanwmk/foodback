@@ -34,7 +34,7 @@ function createMarker(place) {
 		infoWindow.setContent(infoWindowContent);
 		infoWindow.open(map, this);
 		
-		google.maps.event.addListener(infoWindow, 'click', loadFoodPage);
+		google.maps.event.addDomListener(infoWindow, 'click', loadFoodPage);
 		
 	});
 }
