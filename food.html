@@ -36,7 +36,9 @@
 					</div>
 
 					<div class="col-xs-7" style="text-align:right;">
-						<button type="button" id="followButton" class="btn btn-default" style="font-size:10px;">Bookmark</button>
+						<button type="button" id="followButton" class="btn btn-default" style="font-size:10px;">
+							<i class="fa fa-bookmark fa-lg"></i>
+						</button>
 						<button type="button" class="btn btn-success" onclick="window.location.href='contribute.html'"
 						data-toggle="modal" data-target="#contributeData" style="font-size:10px;">Contribute</button>
 					</div>
@@ -259,16 +261,17 @@
 			});
 
 			function toggleFollow(){
-				var background = document.getElementById('followButton').style.backgroundColor;
+				var color = document.querySelector('#followButton>i').style.color;
 
-				if (background == "rgb(255, 255, 255)") {
-					document.getElementById('followButton').style.background = "rgb(255,255,0)";
-				} else if (background == "rgb(255, 255, 0)"){
-					document.getElementById('followButton').style.background = "rgb(255,255,255)";
-				} else {
-					document.getElementById('followButton').style.background = "rgb(255,255,0)";
+				if (color == "limegreen"){
+					document.querySelector('#followButton>i').className = "fa fa-bookmark fa-lg";
+					document.querySelector('#followButton>i').style.color = "black";
+				} else{
+					document.querySelector('#followButton>i').className = "fa fa-bookmark fa-lg";
+					document.querySelector('#followButton>i').style.color = "limegreen";
 				}
 			}
 		</script>
+
 	</body>
 </html>
