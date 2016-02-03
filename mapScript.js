@@ -28,9 +28,10 @@ function createMarker(place) {
 		position: place.geometry.location,
 		map: map
 	});
+	var infoWindowContent = place.name + '<br> 5 min away';
 
 	google.maps.event.addListener(marker, 'click', function() {
-		infoWindow.setContent(place.name);
+		infoWindow.setContent(infoWindowContent);
 		infoWindow.open(map, this);
 	});
 }
