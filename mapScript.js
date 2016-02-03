@@ -33,7 +33,15 @@ function createMarker(place) {
 	google.maps.event.addListener(marker, 'click', function() {
 		infoWindow.setContent(infoWindowContent);
 		infoWindow.open(map, this);
+		
+		google.maps.event.addDomListener(infoWindow, 'click', loadFoodPage);
+		
 	});
+}
+
+function loadFoodPage(){
+	console.log("1");
+	window.location.href = "food.html";
 }
 
 function initInfoWindow(){
