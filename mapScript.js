@@ -33,9 +33,6 @@ function createMarker(place) {
 	google.maps.event.addListener(marker, 'click', function() {
 		infoWindow.setContent(infoWindowContent);
 		infoWindow.open(map, this);
-		
-		google.maps.event.addDomListener(infoWindow, 'click', loadFoodPage);
-		
 	});
 }
 
@@ -50,6 +47,7 @@ function initInfoWindow(){
 		content: 'You are here'
 	});
 	infoWindow.open(map, marker);
+	google.maps.event.addListener(infoWindow, 'click', loadFoodPage());
 }
 
 function initMarker(){
