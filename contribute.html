@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="simple-sidebar.css" >
+
+		<title>FoodBack</title>
+		
+		<script>
+			//Script for inserting the side/navbar here
+			$.get("http://foodback3.azurewebsites.net/wrapper.html", function( data ) {
+				var element=$.parseHTML(data);
+				$('body').prepend(element);
+
+				var dom = $(data);
+				dom.filter('script').each(function(){
+					$.globalEval(this.text || this.textContent || this.innerHTML || '');
+				});
+			});
+		</script>
+	</head>
+
+    <body>
+        <div class="container-fluid appBackground">
+            <div class="page-header titlePadding">
+                <h3 class="noMargin"><strong>Contribute</strong></h3>
+                <h6><strong>Habitual Fix</strong></h6>
+            </div>
+
+            <div class="row noPadding">
+                <div class="col-xs-6">
+                    <h5>Type of oil used: </h5>
+                </div>
+
+                <div class="col-xs-6">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                        <span id="dropdown_title">Please choose one</span>
+                        <span class="caret"></span></button>
+                        <ul id="divNewNotifications" class="dropdown-menu">
+                            <li><a href="#">Canola Oil</a></li>
+                            <li><a href="#">Coconut Oil</a></li>
+                            <li><a href="#">Olive Oil</a></li>
+                            <li><a href="#">Palm Oil</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row noPadding">
+                <div class="col-xs-6">
+                    <h5>Soft Drinks Sold: </h5>
+                </div>
+
+                <div class="col-xs-6">
+                    <input type="checkbox" style="margin-top:10px">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <textarea class="form-control" rows="5" id="review" placeholder="Please write a review..."></textarea>
+			</div>
+
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-block" 
+            style="margin-bottom:10px;" data-toggle="modal" data-target="#takePicture">
+                Add Picture
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="takePicture" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Add a Picture</h4>
+                        </div>
+
+                        <div class="panel-group">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <ul class="list-group">
+								        <li class="list-group-item">
+								            <span class="glyphicon glyphicon-camera pull-right"></span> Camera</li>
+								        <li class="list-group-item">
+								            <span class="glyphicon glyphicon-picture pull-right"></span> Gallery</li>
+							         </ul>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Add</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="btn btn-success btn-block" onclick="window.location.href='food1.html';">Submit</div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="btn btn-danger btn-block" onclick="window.history.back();">Back</div>
+                </div>
+            </div>
+
+
+            <script>
+                $('.dropdown-toggle').dropdown();
+
+
+                $('#divNewNotifications li').on('click', function() {
+                    $('#dropdown_title').html($(this).find('a').html());
+                });
+            </script>
+
+        </div>
+    </body>
+</html>

@@ -27,12 +27,14 @@
 	</head>
 
 	<body>
-		<div class="container-fluid" style="padding:0px;">
-			<div class="jumbotron" style="padding:15px; margin-bottom:0px; border-radius:0px;">
-				<div class="row">
-					<div class="col-xs-5" style="text-align:left;">
+        <div class="container-fluid appBackground">
+            <div class="row" style="background-color:#eee; padding:10px;">
+                
+                <div class="row">
+				    <div class="col-xs-5" style="text-align:left;">
 						<h3 class="noPadding" style="margin-top:0px;"><strong>Habitual Fix</strong></h3>
 					</div>
+
 					<div class="col-xs-7" style="text-align:right;">
 						<button type="button" id="followButton" class="btn btn-default" style="font-size:10px;">Follow</button>
 						<button type="button" class="btn btn-success" onclick="window.location.href='contribute.html'"
@@ -40,110 +42,71 @@
 					</div>
 				</div>
 
-				<!-- Modal -->
-				<div class="modal fade" id="contributeData" role="dialog">
-					<div class="modal-dialog">
-
-			  		<!-- Modal content-->
-	 		 		<div class="modal-content">
-						<div class="modal-header">
-		  					<button type="button" class="close" data-dismiss="modal">&times;</button>
-		  						<h4 class="modal-title">Contribute Data</h4>
-							</div>
-						
-						<div class="panel-group">
-							<div class="panel panel-default">
-							  <div class="panel-heading">Habitual Fix</div>
-							  <div class="panel-body">
-								<div class="dropdown">
-									<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
-										Please select the oil used
-									<span class="caret"></span></button>
-									<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-									  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Canola Oil</a></li>
-									  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Coconut Oil</a></li>
-									  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Olive Oil</a></li>
-									  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Palm Oil</a></li>
-									</ul>
-								</div>
-
-								<form role="form">
-									<div class="checkbox">
-							  			<label><input type="checkbox" value="">Soft Drinks Sold</label>
-									</div>
-						  		</form>
-
-
-								  	<form role="form">
-										<div class="form-group">
-									  	<textarea class="form-control" rows="5" id="review" placeholder="Enter Review..."></textarea>
-										</div>
-								  	</form>
-
-								  	<button class="btn btn-success btn-block sharpButton">
-										<p class="h2" style="margin:0px; "><strong>Add Picture</strong></p>
-									</button>
-
-						
-
-							</div>
-						  </div>
-						</div>
-
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
-	  						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-						</div>
-	 				</div>
-					</div>
-				</div>
-
 				<div class="row">
 					<div class="col-xs-7">
-						<p>10 Right Street</p>
+						<h5>10 Right Street</h5 >
 					</div>
+
 					<div class="col-xs-5" style="text-align:right;">
 						<button class="btn facebookButton" style="margin-right:5px;"><i class="fa fa-facebook"></i>
 						<button class="btn twitterButton"><i class="fa fa-twitter"></i>
 					</div>
 				</div>
-			</div>
-		</div>
 
-		<div class="container-fluid">
-			<img src="goldBadge.png" class="img-responsive center-block" style="width:40%;"/>
-		</div>
+            </div>
 
-		<div class="container-fluid appBackground">
-			<ul class="nav nav-tabs">
-				<li class="active tabWidth "><a data-toggle="tab" href="#badges">Badges <span class="badge">2</span></a></li>
-				<li class="tabWidth "><a data-toggle="tab" href="#details">Details</a></li>
-				<li class="tabWidth "><a data-toggle="tab" href="#picture">Images <span class="badge">13</span></a></li>
-				<li class="tabWidth "><a data-toggle="tab" href="#reviews">Reviews <span class="badge">1</span></a></li>
-			</ul>
+            <div class="row">
 
-			<div class="tab-content">
-				<div id="badges" class="tab-pane fade in active"><br>
-					<div>
+                <div class="col-xs-4">
+                    <img src="goldBadge.png" class="img-responsive center-block"/>
+                </div>
+
+                <div class="col-xs-8">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <i class="fa fa-glass fa-lg"></i>
+                            <i class="fa fa-tint fa-lg"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <ul class="nav nav-tabs" style="width:101%">
+                <li class="active"><a data-toggle="tab" href="#badges">Badges</a></li>
+                <li><a data-toggle="tab" href="#details">Details</a></li>
+                <li><a data-toggle="tab" href="#pictures">Pictures</a></li>
+                <li><a data-toggle="tab" href="#reviews">Reviews</a></li>
+            </ul>
+
+            <div class="tab-content">
+
+                <div id="badges" class="tab-pane fade in active">
+                    
+                    <br>
+                    <div>
 						<i class="fa fa-glass fa-lg"></i> No sugary drinks
 					</div>
 					<br>
 					<div>
-						<span class="glyphicon glyphicon-tint"></span> Clean oil used
+						<i class="fa fa-tint fa-lg"></i> Clean oil used
 					</div>
-				</div> 
 
-				<div id="details" class="tab-pane fade">
-					<h3>Hours: 8am - 10pm</h3>
-					<h3>Contact Info: 022-1234567</h3>
+                </div>
+
+                <div id="details" class="tab-pane fade">
+                    
+                    <h4>Hours: 8am - 10pm</h4>
+					<h4>Contact Info: 022-1234567</h4>
 					<br>
 					<br>
-					<h3>Other places you may like: </h3>
+					<h4>Other places you may like: </h4>
 
 					<div class="row">
 						<div class="col-xs-6">
 							<img src="cafe.jpg" class="img-responsive center-block"/>
 						</div>
+
 						<div class="col-xs-6">
 							<img src="cafe1.jpg" class="img-responsive center-block"/>
 						</div>
@@ -151,18 +114,22 @@
 
 					<div class="row">
 						<div class="col-xs-6">
-							<p>Hoyts Lunch Bar</p>
-							<p>2 minutes away</p>
+							<p class="noMargin"><strong>Hoyts Lunch Bar</strong></p>
+							<p class="noMargin"><i class="fa fa-glass"></i></p>
+							<p class="noMargin"><em>2 minutes away</em></p>
 						</div>
+
 						<div class="col-xs-6">
-							<p>Francis Cafe</p>
-							<p>5 minutes away</p>
+							<p class="noMargin"><strong>Francis Cafe</strong></p>
+							<p class="noMargin"><i class="fa fa-tint"></i></p>
+							<p class="noMargin"><em>5 minutes away</em></p>
 						</div>
 					</div>
-				</div>
 
-				<div id="picture" class="tab-pane fade">
-				<br>
+                </div>
+
+                <div id="pictures" class="tab-pane fade">
+                    <br>
 					<div class="row" style="padding:0px;">
 						<div class="col-xs-4" style="padding:0px;">
 							<img src="cafe1.jpg" class="img-thumbnail img-responsive center-block"/>
@@ -199,43 +166,11 @@
 						</div>
 					</div>
 					<br>
+                </div>
 
-					<div class="btn-group-vertical" style="width:100%;">
-						<button class="btn btn-success btn-block sharpButton" data-toggle="modal" data-target="#profilePic">
-							<p class="h2" style="margin:0px; "><strong>Add Picture</strong></p>
-						</button>
+                <div id="reviews" class="tab-pane fade">
 
-						<!-- Modal -->
-					  <div class="modal fade" id="profilePic" role="dialog">
-						<div class="modal-dialog">
-
-						  <!-- Modal content-->
-						  <div class="modal-content">
-							<div class="modal-header">
-							  <button type="button" class="close" data-dismiss="modal">&times;</button>
-							  <h4 class="modal-title"><strong>Add a Picture</strong></h4>
-							</div>
-							<div class="modal-body">
-							  <ul class="list-group">
-								<li class="list-group-item">
-								<span class="glyphicon glyphicon-camera pull-right"></span> Camera</li>
-								<li class="list-group-item">
-								<span class="glyphicon glyphicon-picture pull-right"></span> Gallery</li>
-							  </ul>
-							</div>
-							<div class="modal-footer">
-							  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-							</div>
-						  </div>
-
-						</div>
-					  </div>
-					</div>
-				</div>
-				<br>
-
-				<div id="reviews" class="tab-pane fade">
-					<div class="row">
+                    <div class="row">
 						<div class="col-xs-3">
 							<img src="profileIcon.png" class="img-responsive center-block"/>
 						</div>
@@ -310,43 +245,11 @@
 						</div>
 					  </div>
 					</div>
+                    
+                </div>
 
-					<button class="btn btn-success btn-block sharpButton" data-toggle="modal" data-target="#addReview">
-							<p class="h2" style="margin:0px; "><strong>Add Review</strong></p>
-					</button>
-
-					 <div class="modal fade" id="addReview" role="dialog">
-						<div class="modal-dialog">
-
-						  <!-- Modal content-->
-						  <div class="modal-content">
-							<div class="modal-header">
-							  <button type="button" class="close" data-dismiss="modal">&times;</button>
-							  <h4 class="modal-title"><strong>Add a Review</strong></h4>
-							</div>
-							<div class="modal-body">
-							  <form role="form">
-								<div class="form-group">
-								  <label for="review">Review:</label>
-								  <textarea class="form-control" rows="5" id="review" placeholder="Enter Review..."></textarea>
-								</div>
-							  </form>
-
-							  <button class="btn btn-success btn-block sharpButton">
-								<p class="h2" style="margin:0px; "><strong>Add Picture</strong></p>
-							</button>
-						
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
-							  	<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-							</div>
-						  </div>
-
-						</div>
-				</div>
-			</div>
-		</div>
+            </div>
+        </div>
 
 		<script>
 			$("#followButton").click(function() {
