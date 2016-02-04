@@ -166,4 +166,9 @@ html, body{
     border-radius:5px;
 }
 
+@font-face {
+	font-family: drugs;
+	src: url("fonts3.otf") format("opentype");
+}
+
 style="background-color:lavenderblush;"
