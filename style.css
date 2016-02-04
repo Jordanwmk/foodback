@@ -38,6 +38,12 @@
     -moz-background-size: cover;
 }
 
+.profileBackground {
+	background: url(salad8a.jpg);
+	background-size: cover;
+    -moz-background-size: cover;
+}
+
 .carousel .active.left {
     left:0;
     opacity:0;
