@@ -167,8 +167,9 @@ html, body{
 }
 
 @font-face {
-	font-family: drugs;
-	src: url("fonts3.otf") format("opentype");
+    font-family: myFirstFont;
+    src: url(font6.ttf);
 }
+
 
 style="background-color:lavenderblush;"
