@@ -25,7 +25,7 @@
 						$.globalEval(this.text || this.textContent || this.innerHTML || '');
 					});
 				});
-			}else if (localStorage.getItem('foodbackLog')=='no'){
+			}else{
 				//Not logged in
 				$.get("http://foodback3.azurewebsites.net/wrapper2.html", function( data ) {
 					var element=$.parseHTML(data);
