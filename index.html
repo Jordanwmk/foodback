@@ -1,90 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="simple-sidebar.css" >
 
-    <title>FoodBack</title>
-  </head>
+		<title>FoodBack</title>
+		
+		<script>
+			if (localStorage.getItem('foodbackLoggedIn')=='yes'){
+				//Logged in
+				//Script for inserting the side/navbar here
+				$.get("http://foodback3.azurewebsites.net/wrapper.html", function( data ) {
+					var element=$.parseHTML(data);
+					$('body').prepend(element);
 
-  <body>
-    <div class="container">
-		<div id="myCarousel" class="carousel slide" data-ride"carousel">
-			<!-- Indicators -->
-			<ol class="carousel-indicators">
-			  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			  <li data-target="#myCarousel" data-slide-to="1"></li>
-			  <li data-target="#myCarousel" data-slide-to="2"></li>
-			  <li data-target="#myCarousel" data-slide-to="3"></li>
-			</ol>
+					var dom = $(data);
+					dom.filter('script').each(function(){
+						$.globalEval(this.text || this.textContent || this.innerHTML || '');
+					});
+				});
+			}else{
+				//Not logged in
+				$.get("http://foodback3.azurewebsites.net/wrapper2.html", function( data ) {
+					var element=$.parseHTML(data);
+					$('body').prepend(element);
 
-			<!-- Wrapper for slides -->
-			<div class="carousel-inner" role="listbox">
+					var dom = $(data);
+					dom.filter('script').each(function(){
+						$.globalEval(this.text || this.textContent || this.innerHTML || '');
+					});
+				});
+			}
+			
+		</script>
+	</head>
 
-				<div class="item one active">
-					<div class="carousel-caption carouselCaption">
-						<p>FoodBack is a new initiative to empower people for healthier community food places.</p>
-						<br>
-					</div>
-				</div>
-
-				<div class="item two">
-					<div class="carousel-caption carouselCaption">
-					 	<p>Foodback involves the development of a smartphone app for crowdsourcing data 
-					  	on the healthiness of foods advertised and sold in local community settings.</p>
-						<br>
-					</div>
-				</div>
-
-				<div class="item three">
-					<div class="carousel-caption carouselCaption">
-						<p>The results will be fed back automatically to local change agents 
-					  	in the form of health star ratings, comments, or awards.</p>
-						<br>
-					</div>
-				</div>
-
-				<div class="item four">
-					<div class="carousel-caption carouselCaption">
-						<p>This way, you can encourage and support local change agents to make positive, 
-					  	healthy changes to foods advertised and sold in the community.</p>
-						<br>
-					</div>
-				</div>
-			</div>	
+	<body>
+		<div class="container"></div>
+			<div id="map"></div>
+			<script src="mapScript.js"></script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpBd2lvpU8DbDS9tydPHMS2xGP-9jsDLU&signed_in=true&libraries=places&callback=initMap" async defer>
+			</script>
 		</div>
-
-
-		<div class="row">
-			<div class="col-xs-12">
-				<img src="mainMenuLogo2.png" class="img-responsive center-block" style="max-width: 70%; padding-top:10px;"/>
-			</div>
-		</div>
-
-		<div class="row noPadding noMargin navbar-fixed-bottom">
-			<div class="col-xs-12 noMargin noPadding">
-				<div class="btn-group btn-group-justified ">
-					<a href="login.html" class="btn btn-success center-block sharpButton largeButton">Login</a>
-					<a href="register.html" class="btn btn-success center-block sharpButton largeButton">Register</a>
-				</div>
-			</div>
-		</div>
-
-
-
-	</div>
-    
-	<script type="text/javascript">
-	  $(document).ready(function() {
-		$('.carousel').carousel({interval: 10000});
-	  });
-	</script>
-	
-  </body>
+	</body>
 </html>
