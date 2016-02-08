@@ -40,28 +40,31 @@
 				</div>
 			</form>
 
-			<a href="map.html" class="btn btn-success center-block">
+			<a href="map.html" class="btn btn-success center-block" onclick="logIn();">
 				Login
-				<script>localStorage.setItem('foodbackLog', 'no');</script>
 			</a>
 
 			<div class="row noMargin">
 				<div class="col-sm-12 text-center noMargin"><h1><small>OR<small></h1></div>
 			</div>
 
-			<button class="btn btn-default btn-block facebookButton" onclick="window.location.href='map.html'">
+			<button class="btn btn-default btn-block facebookButton" onclick="logIn(); window.location.href='map.html'">
 				Login with Facebook <i class="fa fa-facebook-square"></i>
-				<script>localStorage.setItem('foodbackLog', 'no');</script>
 			</button>
 
-			<button class="btn btn-default btn-block twitterButton" onclick="window.location.href='map.html'">
+			<button class="btn btn-default btn-block twitterButton" onclick="logIn(); window.location.href='map.html'">
 				Login with Twitter <i class="fa fa-twitter-square"></i>
-				<script>localStorage.setItem('foodbackLog', 'no');</script>
 			</button>
 
 
 			<button class="btn btn-warning btn-block" onclick="window.location.href='map.html'">Login as guest</button>
 			<br>
+
+			<script>
+				function logIn(){
+					localStorage.setItem('foodbackLog',yes);
+				}
+			</script>
 		
 		</div>
 

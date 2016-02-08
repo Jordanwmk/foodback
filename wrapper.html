@@ -92,12 +92,7 @@
 						<a href="index.html"><i class="fa fa-sign-out"></i></a>
 					</div>
 					<div class="col-xs-10">
-						<a href="index.html">
-							Log Out
-							<script>localStorage.setItem('foodbackLog','no');</script>
-						</a>
-						
-
+						<a href="index.html" onclick="logOut();">Log Out</a>	
 					</div>
 				</div>
 			</li>
@@ -112,4 +107,8 @@ $("#menu-toggle").click(function(e) {
 	e.preventDefault();
 	$("#wrapper").toggleClass("toggled");
 });
+
+function logOut(){
+	localStorage.setItem('foodbackLog',no);
+}
 </script>
