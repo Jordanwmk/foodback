@@ -40,7 +40,10 @@
 				</div>
 			</form>
 
-			<a href="map.html" class="btn btn-success center-block">Login</a>
+			<a href="map.html" class="btn btn-success center-block">
+				Login
+				<script>localStorage.setItem('foodbackLog', 'yes');</script>
+			</a>
 
 			<div class="row noMargin">
 				<div class="col-sm-12 text-center noMargin"><h1><small>OR<small></h1></div>
@@ -48,10 +51,12 @@
 
 			<button class="btn btn-default btn-block facebookButton" onclick="window.location.href='map.html'">
 				Login with Facebook <i class="fa fa-facebook-square"></i>
+				<script>localStorage.setItem('foodbackLog', 'yes');</script>
 			</button>
 
 			<button class="btn btn-default btn-block twitterButton" onclick="window.location.href='map.html'">
 				Login with Twitter <i class="fa fa-twitter-square"></i>
+				<script>localStorage.setItem('foodbackLog', 'yes');</script>
 			</button>
 
 
