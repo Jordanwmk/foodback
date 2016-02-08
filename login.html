@@ -40,7 +40,7 @@
 				</div>
 			</form>
 
-			<a href="map.html" class="btn btn-success center-block" onclick="logIn();">
+			<a class="btn btn-success center-block" onclick="logIn();">
 				Login
 			</a>
 
@@ -48,11 +48,11 @@
 				<div class="col-sm-12 text-center noMargin"><h1><small>OR<small></h1></div>
 			</div>
 
-			<button class="btn btn-default btn-block facebookButton" onclick="logIn(); window.location.href='map.html'">
+			<button class="btn btn-default btn-block facebookButton" onclick="logIn();">
 				Login with Facebook <i class="fa fa-facebook-square"></i>
 			</button>
 
-			<button class="btn btn-default btn-block twitterButton" onclick="logIn(); window.location.href='map.html'">
+			<button class="btn btn-default btn-block twitterButton" onclick="logIn();">
 				Login with Twitter <i class="fa fa-twitter-square"></i>
 			</button>
 
@@ -62,7 +62,8 @@
 
 			<script>
 				function logIn(){
-					localStorage.setItem('foodbackLog',yes);
+					localStorage.setItem('foodbackLog', 'yes');
+					window.history.back();
 				}
 			</script>
 		
