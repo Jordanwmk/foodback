@@ -26,7 +26,7 @@
 
 					<div class="col-xs-7" style="text-align:right;">
 						<button type="button" id="followButton" class="btn btn-default" style="font-size:10px;">
-							<i class="fa fa-bookmark fa-lg"></i>
+							Favorite
 						</button>
 						<button type="button" class="btn btn-success" onclick="window.location.href='contribute.html'"
 						data-toggle="modal" data-target="#contributeData" style="font-size:10px;">Contribute</button>
@@ -252,14 +252,12 @@
 			});
 
 			function toggleFollow(){
-				var color = document.querySelector('#followButton>i').style.color;
+				var color = document.querySelector('#followButton').style.backgroundColor;
 
-				if (color == "limegreen"){
-					document.querySelector('#followButton>i').className = "fa fa-bookmark fa-lg";
-					document.querySelector('#followButton>i').style.color = "black";
+				if (color == "yellow"){
+					document.querySelector('#followButton').style.backgroundColor = "white";
 				} else{
-					document.querySelector('#followButton>i').className = "fa fa-bookmark fa-lg";
-					document.querySelector('#followButton>i').style.color = "limegreen";
+					document.querySelector('#followButton').style.backgroundColor = "yellow";
 				}
 			}
 
