@@ -46,7 +46,7 @@
       
 
         <div class="btn-group btn-group-justified">
-          <a href="map.html" id="registerButton" class="btn btn-success disabled">Register</a>
+          <a id="registerButton" class="btn btn-success disabled" onclick="logIn();">Register</a>
         </div>
         <br>
 
@@ -55,12 +55,19 @@
 				if (document.getElementById("agreeTC").checked){
 					document.getElementById("registerButton").className = 
 						document.getElementById("registerButton").className.replace
-      					( /(?:^|\s)disabled(?!\S)/g , '' )
+      					( 'disabled' , '' )
 				} else {
 					document.getElementById("registerButton").className += " disabled";
 				}
 			}
         </script>
+
+        <script>
+			function logIn(){
+				localStorage.setItem('foodbackLog', 'yes');
+				window.location.href="index.html";
+			}
+		</script>
 
     </div>
 
