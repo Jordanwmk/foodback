@@ -29,10 +29,10 @@
 			<li>
 				<div class="row">
 					<div class="col-xs-2">
-						<a href="profile.html"><i class="fa fa-user"></i></a>
+						<a href="login.html"><i class="fa fa-user"></i></a>
 					</div>
 					<div class="col-xs-10">
-						<a href="profile.html">Profile</a>
+						<a href="login.html">Log In</a>
 					</div>
 				</div>
 			</li>
@@ -69,30 +69,10 @@
 			<li>
 				<div class="row">
 					<div class="col-xs-2">
-						<a href="newPlace.html"><i class="fa fa-plus"></i></a>
-					</div>
-					<div class="col-xs-10">
-						<a href="newPlace.html">Add New Place</a>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="row">
-					<div class="col-xs-2">
 						<a href="aboutFoodback.html"><i class="fa fa-info-circle"></i></a>
 					</div>
 					<div class="col-xs-10">
 						<a href="aboutFoodback.html">About Us</a>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="row">
-					<div class="col-xs-2">
-						<a href="index.html" onclick="logOut();"><i class="fa fa-sign-out"></i></a>
-					</div>
-					<div class="col-xs-10">
-						<a href="index.html" onclick="logOut();">Log Out</a>	
 					</div>
 				</div>
 			</li>
@@ -107,9 +87,4 @@ $("#menu-toggle").click(function(e) {
 	e.preventDefault();
 	$("#wrapper").toggleClass("toggled");
 });
-
-function logOut(){
-	localStorage.setItem('foodbackLog','no');
-}
-
 </script>
