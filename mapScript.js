@@ -3,7 +3,7 @@ var image = 'here.png';
 var goldMarker ='goldMarker.png';
 var silverMarker ='silverMarker.png';
 var bronzeMarker ='bronzeMarker.png';
-var markerList = [goldMarker, silverMarker, bronzeMarker];
+var markerList = [bronzeMarker, silverMarker, goldMarker, goldMarker, goldMarker];
 var zoomAmount = 18;
 var map, marker, infoWindow;
 
