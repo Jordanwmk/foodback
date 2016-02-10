@@ -57,11 +57,12 @@
 			</button>
 
 			<h6>Don't have an account?<span class="btn-link" onclick="window.location.href='register.html'"> Register here</span></h6>
-
+			<br>
+			
 			<script>
 				function logIn(){
 					localStorage.setItem('foodbackLog', 'yes');
-					window.history.back();
+					window.location.href = document.referrer;
 				}
 			</script>
 		
