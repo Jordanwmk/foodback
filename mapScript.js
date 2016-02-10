@@ -1,5 +1,9 @@
 var myLatLng = {lat: -36.8576017, lng: 174.7590294};
 var image = 'here.png';
+var goldMarker ='goldMarker.png';
+var silverMarker ='silverMarker.png';
+var bronzeMarker ='bronzeMarker.png';
+var markerList = [goldMarker, silverMarker, bronzeMarker];
 var zoomAmount = 18;
 var map, marker, infoWindow;
 
@@ -24,9 +28,13 @@ function createFoodMarker(results, status) {
 
 function createMarker(place) {
 	var placeLoc = place.geometry.location;
+	var randomNumber = Math.floor(Math.random() * (markerList.length - 1));
+	var tempImage = markerList[randomNumber];
+	
 	var marker = new google.maps.Marker({
 		position: place.geometry.location,
-		map: map
+		map: map,
+		icon: tempImage
 	});
 	var infoWindowContent = '<p onclick=\"window.location.href=\'food.html\'\">' + place.name + '<br> 5 min away</p>';
 
