@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="slidePlugin/pgwslideshow.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="simple-sidebar.css">
+		<link rel="stylesheet" href="slidePlugin/pgwslideshow.min.css">
+		<link rel="stylesheet" href="slidePlugin/pgwslideshow_light.min.css">
+
+		<title>FoodBack</title>
+		
+		<script src="head.js"></script>
+	</head>
+
+    <body>
+        <ul class="pgwSlideshow">
+            <li><img src="cafe1.jpg" alt=""></li>
+            <li><img src="salad4.jpg" alt=""></li>
+            <li><img src="salad5.jpg" alt=""></li>
+            <li><img src="salad6.jpg" alt=""></li>
+            <li><img src="cafe1.jpg" alt=""></li>
+            <li><img src="salad4.jpg" alt=""></li>
+            <li><img src="salad5.jpg" alt=""></li>
+            <li><img src="salad6.jpg" alt=""></li>
+        </ul>
+
+        <script>
+            $(document).ready(function() {
+                $('.pgwSlideshow').pgwSlideshow({
+                    autoSlide:true,
+                });
+            });
+        </script>
+    </body>
+</html>

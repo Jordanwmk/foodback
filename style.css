@@ -1,0 +1,184 @@
+.appBackground{
+	background-color:#F8F8FF;
+	height:95%;
+}
+
+.carousel { z-index: -9999999999999; } /* keeps this behind all content */
+
+.carousel .item {
+    position: fixed; 
+    width: 100%; height: 100%;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+.carousel .one {
+    background: url(salad4a.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+
+.carousel .two {
+    background: url(salad2a.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+
+.carousel .three {
+    background: url(salad3a.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+
+.carousel .four {
+    background: url(salad7a.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+
+.loadingPage{
+	background: url(salad7a.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+
+.profileBackground {
+	background: url(salad8a.jpg);
+	background-size: cover;
+    -moz-background-size: cover;
+}
+
+.carousel .active.left {
+    left:0;
+    opacity:0;
+    z-index:2;
+}
+
+.carouselCaption{
+	font-size:15px;
+}
+
+html, body{
+    margin:0px;
+    padding:0px;
+    height: 100%;
+}
+
+.navbar { 
+    margin-bottom: -20px; 
+}
+
+.twitterButton{
+	color:white;
+	background-color:#55acee;
+}
+
+.facebookButton{
+	color:white;
+	background-color:#385490;
+}
+
+.navbar .navbar-form{
+    padding:0px ;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.profileLogo{
+	font-size: 28px;
+}
+
+#searchInput {
+    -webkit-transition: width 1s ease;
+    -moz-transition: width 1s ease;
+    -o-transition: width 1s ease;
+    transition: width 1s ease;   
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 0px;
+}
+
+#searchInput.in {
+    width: 220px;
+}
+
+#map{
+	height:92%;
+}
+
+.sharpButton{
+	border-radius: 0px;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+.voteArrow{
+	font-size:25px;
+}
+
+.tabWidth{
+    width:25%;
+}
+
+.floating-action-button{
+	background-color:#5cb85c;
+	border-radius:50%;
+	width:50px;
+	height:50px;
+	text-align:center;
+	margin:10px;
+	font-size:35px;
+	color:whitesmoke;
+}
+
+.noPadding{
+	padding:0px;
+}
+
+.noMargin{
+	margin:0px;
+}
+
+.titlePadding{
+	padding:10px;
+	margin:0px;
+	margin-bottom:30px;
+}
+
+.largeButton{
+	font-size:25px;
+}
+
+.optionsButton{
+	font-size:30px;
+}
+
+#grad1 {
+    height: 10px;
+    background: yellow; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left, red , yellow,  green); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, red, yellow, green); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, red,yellow, green); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, red , yellow, green); /* Standard syntax (must be last) */
+    border-radius:5px;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(font6.ttf);
+}
+
+.thumbPic{
+	
+}
+
+style="background-color:lavenderblush;"
