@@ -17,182 +17,229 @@
 
     <body>
         <div class="container-fluid appBackground">
-            <div class="page-header titlePadding">
+            <div class="page-header titlePadding" style="margin-bottom:0px">
                 <h3 class="noMargin"><strong>News Feed</strong></h3>
             </div>
 
-            <div class="panel panel-default">
-                <div class="panel-body">
+            <ul class="nav nav-tabs">
+   				<li class="active"><a data-toggle="tab" href="#pStories">Popular Stories</a></li>
+    			<li><a data-toggle="tab" href="#funFact">Recommendations</a></li>
+  			</ul>
 
-                    <div class="row" style="padding-bottom:10px;">
-                        <div class="col-xs-3">
-                            <img src="profileIcon.png" class="img-responsive pull-left" style="height:50px;"/>
-                        </div>
+  			<div class="tab-content">
+    			<div id="pStories" class="tab-pane fade in active">
 
-                        <div class="col-xs-6">
-                            <div class="row noPadding">
-								<h6 class="noPadding">Marvin</h6>
-                            </div>
+    				<br>
+					<div class="panel panel-default">
+						<div class="panel-body">
 
-                            <div class="row noPadding">
-								<h6 class="noPadding noMargin">20 followers</h6>
-                            </div>
-                        </div>
-
-                        <div class="col-xs-3">
-                        	<i class="fa fa-thumbs-down"></i> 25 
-                            <i class="fa fa-thumbs-up"></i>
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-                    	<div class="col-xs-12">
-							<h6>Refreshing and tasty! Would recommend for a healthy meal</h6>
-						</div>
-                    </div>
-
-                    <div class="row">
-                    	<div class="col-xs-12">
-							<div class="row">
-								<div class="col-xs-4" style="padding:5px;">
-									<img src="cafe1.jpg" class="img-thumbnail img-responsive center-block"/>
+							<div class="row" style="padding-bottom:10px;">
+								<div class="col-xs-3">
+									<img src="profileIcon.png" onclick="window.location.href='profile.html'" class="img-responsive pull-left" style="height:50px;"/>
 								</div>
-								<div class="col-xs-4" style="padding:5px;">
-									<img src="salad6.jpg" class="img-thumbnail img-responsive center-block"/>
-								</div>
-								<div class="col-xs-4" style="padding:5px;">
-									<img src="morePictures.png" class="img-thumbnail img-responsive center-block"/>
-								</div>
-							</div>
-						</div>
-                    </div>
 
-                    <div class="row">
-						<div class="col-xs-12">
-
-							<div class="panel panel-default noMargin" onclick="window.location.href='food.html'">
-								<div class="panel-body">
-
-									<div class="row">
-
-										<div class="col-xs-6">
-											<div class="row">
-												<div class="col-xs-12">
-													<h5 class="noMargin"><em>Habitual Fix</em></h5>
-												</div>
-											</div>
-
-											<div class="row">
-												<div class="col-xs-12">
-													<h6><small><em>10 Right Street</em></small></h6>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-xs-6">
-											<i class="fa fa-tint pull-right" style="padding-top:7px;"></i>
-                            				<i class="fa fa-glass pull-right" style="padding-top:7px;"></i>
-										</div>
-
+								<div class="col-xs-5">
+									<div class="row noPadding">
+										<h6 class="noPadding">Marvin</h6>
 									</div>
-									
-							  	</div>
-							</div>
 
-						</div>
-                    </div>
-                    
-                </div>
-            </div>
-
-
-		 <div class="panel panel-default">
-                <div class="panel-body">
-
-                    <div class="row" style="padding-bottom:10px;">
-                        <div class="col-xs-3">
-                            <img src="profileIcon.png" class="img-responsive pull-left" style="height:50px;"/>
-                        </div>
-
-                        <div class="col-xs-6">
-                            <div class="row noPadding">
-								<h6 class="noPadding">Rachel</h6>
-                            </div>
-
-                            <div class="row noPadding">
-								<h6 class="noPadding noMargin">5 followers</h6>
-                            </div>
-                        </div>
-
-                        <div class="col-xs-3">
-                        	<i class="fa fa-thumbs-down"></i> 10 
-                            <i class="fa fa-thumbs-up"></i>
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-                    	<div class="col-xs-12">
-							<h6>Reasonable price for a quick and healthy meal!</h6>
-						</div>
-                    </div>
-
-                    <div class="row">
-                    	<div class="col-xs-12">
-							<div class="row">
-								<div class="col-xs-4" style="padding:5px;">
-									<img src="cafe1.jpg" class="img-thumbnail img-responsive center-block"/>
-								</div>
-								<div class="col-xs-4" style="padding:5px;">
-									<img src="salad6.jpg" class="img-thumbnail img-responsive center-block"/>
-								</div>
-								<div class="col-xs-4" style="padding:5px;">
-									<img src="morePictures.png" class="img-thumbnail img-responsive center-block"/>
-								</div>
-							</div>
-						</div>
-                    </div>
-
-                    <div class="row">
-						<div class="col-xs-12">
-
-							<div class="panel panel-default noMargin" onclick="window.location.href='food.html'">
-								<div class="panel-body">
-
-									<div class="row">
-
-										<div class="col-xs-6">
-											<div class="row">
-												<div class="col-xs-12">
-													<h5 class="noMargin"><em>Habitual Fix</em></h5>
-												</div>
-											</div>
-
-											<div class="row">
-												<div class="col-xs-12">
-													<h6><small><em>10 Right Street</em></small></h6>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-xs-6">
-											<i class="fa fa-tint pull-right" style="padding-top:7px;"></i>
-                            				<i class="fa fa-glass pull-right" style="padding-top:7px;"></i>
-										</div>
-
+									<div class="row noPadding">
+										<h6 class="noPadding noMargin">20 followers</h6>
 									</div>
-									
-							  	</div>
-							</div>
-							
-						</div>
-                    </div>
-                    
-                </div>
-            </div>
+								</div>
 
-            
+								<div class="col-xs-4">
+									<i class="fa fa-thumbs-down"></i> 25 
+									<i class="fa fa-thumbs-up"></i>
+								</div>
+
+							</div>
+
+							<div class="row">
+								<div class="col-xs-12">
+									<h6>Refreshing and tasty! Would recommend for a healthy meal</h6>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="row">
+										<div class="col-xs-4" style="padding:5px;">
+											<img src="cafe1.jpg" class="img-thumbnail img-responsive center-block"/>
+										</div>
+										<div class="col-xs-4" style="padding:5px;">
+											<img src="salad6.jpg" class="img-thumbnail img-responsive center-block"/>
+										</div>
+										<div class="col-xs-4" style="padding:5px;">
+											<img src="morePictures.png" class="img-thumbnail img-responsive center-block"/>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-xs-12">
+
+									<div class="panel panel-default noMargin" onclick="window.location.href='food.html'">
+										<div class="panel-body">
+
+											<div class="row">
+
+												<div class="col-xs-6">
+													<div class="row">
+														<div class="col-xs-12">
+															<h5 class="noMargin"><em>Habitual Fix</em></h5>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-xs-12">
+															<h6><small><em>10 Right Street</em></small></h6>
+														</div>
+													</div>
+												</div>
+
+												<div class="col-xs-6">
+													<i class="fa fa-tint pull-right" style="padding-top:7px;"></i>
+													<i class="fa fa-glass pull-right" style="padding-top:7px;"></i>
+												</div>
+
+											</div>
+
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+
+				 <div class="panel panel-default">
+						<div class="panel-body">
+
+							<div class="row" style="padding-bottom:10px;">
+								<div class="col-xs-3">
+									<img src="profileIcon.png" onclick="window.location.href='profile.html'" class="img-responsive pull-left" style="height:50px;"/>
+								</div>
+
+								<div class="col-xs-5">
+									<div class="row noPadding">
+										<h6 class="noPadding">Rachel</h6>
+									</div>
+
+									<div class="row noPadding">
+										<h6 class="noPadding noMargin">5 followers</h6>
+									</div>
+								</div>
+
+								<div class="col-xs-4">
+									<i class="fa fa-thumbs-down"></i> 10 
+									<i class="fa fa-thumbs-up"></i>
+								</div>
+
+							</div>
+
+							<div class="row">
+								<div class="col-xs-12">
+									<h6>Reasonable price for a quick and healthy meal!</h6>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="row">
+										<div class="col-xs-4" style="padding:5px;">
+											<img src="cafe1.jpg" class="img-thumbnail img-responsive center-block"/>
+										</div>
+										<div class="col-xs-4" style="padding:5px;">
+											<img src="salad6.jpg" class="img-thumbnail img-responsive center-block"/>
+										</div>
+										<div class="col-xs-4" style="padding:5px;">
+											<img src="morePictures.png" class="img-thumbnail img-responsive center-block"/>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-xs-12">
+
+									<div class="panel panel-default noMargin" onclick="window.location.href='food.html'">
+										<div class="panel-body">
+
+											<div class="row">
+
+												<div class="col-xs-6">
+													<div class="row">
+														<div class="col-xs-12">
+															<h5 class="noMargin"><em>Habitual Fix</em></h5>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-xs-12">
+															<h6><small><em>10 Right Street</em></small></h6>
+														</div>
+													</div>
+												</div>
+
+												<div class="col-xs-6">
+													<i class="fa fa-tint pull-right" style="padding-top:7px;"></i>
+													<i class="fa fa-glass pull-right" style="padding-top:7px;"></i>
+												</div>
+
+											</div>
+
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+    			</div>
+
+    			<div id="funFact" class="tab-pane fade in active">
+
+					<br>
+					<div class="panel panel-default">
+						<div class="panel-body noPadding" onclick="window.location.href='food.html'">
+
+							<div class="row">
+								<div class="col-xs-12">
+									<img src="salad.jpg" class="img-responsive center-block"/>
+								</div>
+							</div>
+
+							<div class="row" style="padding-left:5px;">
+								<div class="col-xs-5">
+									<h5><strong>Habitual Fix</strong></h5>
+								</div>
+
+								<div class="col-xs-2">
+									<i class="fa fa-usd" style="padding-top:7px;"></i>
+								</div>
+
+								<div class="col-xs-2">          
+                            		<i class="fa fa-tint" style="padding-top:7px;"></i>
+                            		<i class="fa fa-glass" style="padding-top:7px;"></i>
+                        		</div>
+
+								<div class="col-xs-3">          
+									<h6><strong>2 min</strong></h6>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+    			</div>
+
+    		</div>
 
         </div>
     </body>
