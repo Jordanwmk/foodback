@@ -44,6 +44,12 @@
     -moz-background-size: cover;
 }
 
+.foodBackground{
+	background: url(salad9a.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+
 .profileBackground {
 	background: url(salad8a.jpg);
 	background-size: cover;
