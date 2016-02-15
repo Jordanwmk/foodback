@@ -10,33 +10,64 @@
     <link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="simple-sidebar.css" >
 
+	<title>FoodBack</title>
 
-    <title>FoodBack</title>
-
-    <script src="head.js"></script>
+	<script src="head.js"></script>
   </head>
 
   <body>
-    <div class="container-fluid appBackground" style="height:100%;">
-        <div class="page-header titlePadding">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h3><strong>About FoodBack</strong></h3> 
-                </div>
-            </div>
-        </div>
+	<div id="myCarousel" class="carousel container slide" data-ride"carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators" style="position:fixed">
+		  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		  <li data-target="#myCarousel" data-slide-to="1"></li>
+		  <li data-target="#myCarousel" data-slide-to="2"></li>
+		  <li data-target="#myCarousel" data-slide-to="3"></li>
+		</ol>
 
-        <p>Foodback is a new initiative to empower people for healthier community food places.
-        It involves the development of an app for crowdsourcing data on the healthiness of foods.
-        </p>
-        <br>
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" >
 
-		<div align="center" class="embed-responsive embed-responsive-16by9">
-    		<video controls class="embed-responsive-item">
-        		<source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
-    		</video>
-		</div>
+			<div class="item one active">
+				<div class="carousel-caption carouselCaption">
+					<p>FoodBack is a new initiative to empower people for healthier community food places.</p>
+					<br>
+				</div>
+			</div>
 
-       </div>
-	</body>
+			<div class="item two">
+				<div class="carousel-caption carouselCaption">
+					<p>Foodback involves the development of a smartphone app for crowdsourcing data 
+					on the healthiness of foods advertised and sold in local community settings.</p>
+					<br>
+				</div>
+			</div>
+
+			<div class="item three">
+				<div class="carousel-caption carouselCaption">
+					<p>The results will be fed back automatically to local change agents 
+					in the form of health star ratings, comments, or awards.</p>
+					<br>
+				</div>
+			</div>
+
+			<div class="item four">
+				<div class="carousel-caption carouselCaption">
+					<p>This way, you can encourage and support local change agents to make positive, 
+					healthy changes to foods advertised and sold in the community.</p>
+					<br>
+				</div>
+			</div>
+		</div>	
+	</div>
+
+	
+    
+	<script type="text/javascript">
+	  $(document).ready(function() {
+		$('.carousel').carousel({interval: 7000});
+	  });
+	</script>
+	
+  </body>
 </html>
