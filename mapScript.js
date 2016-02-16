@@ -1,9 +1,13 @@
 var myLatLng = {lat: -36.8576017, lng: 174.7590294};
 var image = 'here.png';
-var goldMarker ='goldMarker.png';
-var silverMarker ='silverMarker.png';
-var bronzeMarker ='bronzeMarker.png';
-var markerList = [bronzeMarker, silverMarker, goldMarker, goldMarker, goldMarker];
+var supermarket = 'supermarket.png';
+var fruit = 'fruit.png';
+var market = 'market.png';
+var garden = 'garden.png';
+var convenience = 'convenience.png';
+var takeaway = 'takeaway.png';
+var other = 'other.png';
+var markerList = [supermarket, fruit, market, garden, convenience, takeaway, other];
 var zoomAmount = 18;
 var map, marker, infoWindow;
 
@@ -28,7 +32,7 @@ function createFoodMarker(results, status) {
 
 function createMarker(place) {
 	var placeLoc = place.geometry.location;
-	var randomNumber = Math.floor(Math.random() * (markerList.length - 1));
+	var randomNumber = Math.floor(Math.random() * (markerList.length));
 	var tempImage = markerList[randomNumber];
 	
 	var marker = new google.maps.Marker({
@@ -75,4 +79,3 @@ function initMap() {
 	initInfoWindow();
 	getFoodPlaces();
 }
-
