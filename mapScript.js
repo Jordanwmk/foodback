@@ -48,11 +48,6 @@ function createMarker(place) {
 	});
 }
 
-function loadFoodPage(){
-	console.log("1");
-	window.location.href = "food.html";
-}
-
 function initInfoWindow(){
 	infoWindow = new google.maps.InfoWindow({
 		map: map,
