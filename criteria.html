@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="simple-sidebar.css" >
+		<script src="jquery.mobile.custom.min.js"></script>
 
 		<title>FoodBack</title>
 		
@@ -22,10 +23,12 @@
 				<h3 class="noMargin"><strong>Criteria</strong></h3>
             </div>
 
-            <ul class="nav nav-tabs" style="width:101%">
-                <li class="active tabWidth" ><a data-toggle="tab" href="#gold">Gold</a></li>
-                <li class="tabWidth "><a data-toggle="tab" href="#silver">Silver</a></li>
-                <li class="tabWidth "><a data-toggle="tab" href="#bronze">Bronze</a></li>
+            <ul class="nav nav-tabs" style="width:100%; display: -webkit-box; overflow-x: auto; overflow-y: hidden;">
+                <li class="active tabWidth" style="float:none;"><a data-toggle="tab" href="#gold">Gold</a></li>
+                <li class="tabWidth " style="float:none;"><a data-toggle="tab" href="#silver">Silver</a></li>
+                <li class="tabWidth " style="float:none;"><a data-toggle="tab" href="#bronze">Bronze</a></li>
+                <li class="tabWidth " style="float:none;"><a data-toggle="tab" href="#silver">Silver</a></li>
+                <li class="tabWidth " style="float:none;"><a data-toggle="tab" href="#bronze">Bronze</a></li>
             </ul>
 
             <div class="tab-content">
@@ -65,5 +68,21 @@
 
 
         </div>
+
+        <script>
+			$(function() {
+				$(".tab-content").swiperight(function() {
+					var $tab = $('#tablist .active').prev();
+					if ($tab.length > 0)
+						$tab.find('a').tab('show');
+				});
+				$(".tab-content").swipeleft(function() {
+					var $tab = $('#tablist .active').next();
+					if ($tab.length > 0)
+						$tab.find('a').tab('show');
+				});
+			});
+		</script>
+
 	</body>
 </html>
