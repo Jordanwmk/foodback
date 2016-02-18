@@ -10,6 +10,9 @@
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="simple-sidebar.css" >
 
+		<link href="select2.min.css" rel="stylesheet" />
+		<script src="select2.min.js"></script>
+
 		<title>FoodBack</title>
 		
 		<script src="head.js"></script>
@@ -19,65 +22,11 @@
         <div class="container-fluid appBackground">
             <div class="page-header titlePadding">
 
-				<h3 class="noMargin"><strong>Search Results</strong>
-					<button type="button" class="btn btn-info pull-right" data-toggle="modal" data-target="#filterResults">
-						<span class="glyphicon glyphicon-filter"></span>
-              		</button>
-				</h3>
+				<h3 class="noMargin"><strong>Search Results</strong></h3>
 
                 <h6 class="text-success"><strong>Found 2 result(s)</strong></h6>
             </div>
 
-            <!-- Modal -->
-           	<div class="modal fade" id="filterResults" role="dialog">
-          		<div class="modal-dialog">
-
-					<!-- Modal content-->
-					<div class="modal-content">
-
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">&times;</button>
-                      		<h4 class="modal-title">Filter Results</h4>
-						</div>
-
-						<div class="panel-group noPadding noMargin">
-
-                        	<div class="panel panel-default">
-								<div class="panel-body">
-
-									<div class="row noPadding">
-										<div class="col-xs-5">
-											<h5>Sort by: </h5>
-										</div>
-
-										<div class="col-xs-7">
-											<div class="dropdown">
-												<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-												<span id="dropdown_title3">Number of badges</span>
-												<span class="caret"></span></button>
-												<ul id="divNewNotifications3" class="dropdown-menu">
-													<li><a href="#">Number of badges</a></li><hr class="noMargin">
-													<li><a href="#">Distance</a></li>
-													<li><a href="#">Price</a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-
-								</div>
-                        	</div>
-                    	
-                        </div>
-
-                        <div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Apply</button>
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						</div>
-
-					</div>
-
-          		</div>
-          	</div>
 
 
             <div class="panel panel-default sharpButton">

@@ -10,6 +10,9 @@
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="simple-sidebar.css" >
 
+		<link href="select2.min.css" rel="stylesheet" />
+		<script src="select2.min.js"></script>
+
 		<title>FoodBack</title>
 		
 		<script src="head.js"></script>
@@ -51,7 +54,7 @@
 										</div>
 
 										<div class="col-xs-7">
-											<div class="dropdown">
+											<div class="dropdown pull-right">
 												<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
 												<span id="dropdown_title3">Number of badges</span>
 												<span class="caret"></span></button>
@@ -62,10 +65,35 @@
 												</ul>
 											</div>
 										</div>
+
+									</div>
+									<br>
+									
+									<div class="row noPadding">
+										<div class="col-xs-6">
+											<h5>Type of place: </h5>
+										</div>
+
+										<div class="col-xs-6">		
+											<select class="js-example-basic-multiple" multiple="multiple" style="width: 100%">
+												<option>Takeaway</option>
+												<option>School</option>
+												<option >Hospital</option>
+											</select>
+
+											<script type="text/javascript">
+												$(document).ready(function() {
+													$(".js-example-basic-multiple").select2({
+														placeholder: "None selected",
+													});
+												});
+											</script>
+
+										</div>
 									</div>
 
 								</div>
-                        	</div>
+                        	</div>      	
                     	
                         </div>
 
