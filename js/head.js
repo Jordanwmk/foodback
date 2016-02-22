@@ -2,7 +2,7 @@ $(document).ready(function(){
 	if (localStorage.getItem('foodbackLog')=='yes'){
 		//Logged in
 		//Script for inserting the side/navbar here
-		$.get("https://foodback3.azurewebsites.net/wrapper.html", function( data ) {
+		$.get("https://foodback3.azurewebsites.net/html/wrapper.html", function( data ) {
 			var element=$.parseHTML(data);
 			$('body').prepend(element);
 
@@ -13,7 +13,7 @@ $(document).ready(function(){
 		});
 	}else{
 		//Not logged in
-		$.get("https://foodback3.azurewebsites.net/wrapper2.html", function( data ) {
+		$.get("https://foodback3.azurewebsites.net/html/wrapper2.html", function( data ) {
 			var element=$.parseHTML(data);
 			$('body').prepend(element);
 
