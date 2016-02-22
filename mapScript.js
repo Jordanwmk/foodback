@@ -40,10 +40,10 @@ function createMarker(place) {
 		map: map,
 		icon: tempImage
 	});
-	var infoWindowContent = '<p style="padding:0px; margin:0px;" onclick=\"window.location.href=\'food.html\'\">' + place.name + '<br> 5 min away</p>' +  
+	var infoWindowContent = '<p style="padding:0px; margin:0px;" onclick=\"window.location.href=\'food.html\'\">' + place.name + '<br> 5 min away' +  
 							'<div class="row"><div class="col-xs-4" style="padding-right:0px;"><img style="width:50px; height:50px; padding:0px; margin:0px;" src="oil2.png"/></div>' + 
 							'<div class="col-xs-4" style="padding-right:0px;"><img style="width:50px; height:50px; padding:0px; margin:0px;" src="salt2.png"/></div>' +
-							'<div class="col-xs-4"><img style="width:25px; height:25; padding-top:25px; margin:0px;" src="sugar2.png"/></div></div>';
+							'<div class="col-xs-4"><img style="width:25px; height:25; padding-top:25px; margin:0px;" src="sugar2.png"/></div></div></p>';
 
 	google.maps.event.addListener(marker, 'click', function() {
 		infoWindow.setContent(infoWindowContent);
