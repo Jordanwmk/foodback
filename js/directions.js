@@ -45,7 +45,7 @@ function createMarker(place) {
 								'<div class="row">' +
 
 									'<div class="col-xs-4" style="padding-right:0px;">' +
-										'<img style="width:50px; height:50px; padding:0px; margin:0px;" src="../img/oil2.png"/>' +
+										'<img style="width:50px; height:50px; padding:0px; margin:0px;" src="../img/oilBadge.png"/>' +
 									'</div>' +
 									'<div class="col-xs-4" style="padding-right:0px;">' +
 										'<img style="width:50px; height:50px; padding:0px; margin:0px;" src="../img/salt2.png"/>' +

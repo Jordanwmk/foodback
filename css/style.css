@@ -24,25 +24,25 @@
 }
 
 .carousel .one {
-    background: url(../img/salad4a.jpg);
+    background: url(../img/saladBg3.jpg);
     background-size: cover;
     -moz-background-size: cover;
 }
 
 .carousel .two {
-    background: url(../img/salad2a.jpg);
+    background: url(../img/saladBg1.jpg);
     background-size: cover;
     -moz-background-size: cover;
 }
 
 .carousel .three {
-    background: url(../img/salad3a.jpg);
+    background: url(../img/saladBg2.jpg);
     background-size: cover;
     -moz-background-size: cover;
 }
 
 .carousel .four {
-    background: url(../img/salad7a.jpg);
+    background: url(../img/saladBg4.jpg);
     background-size: cover;
     -moz-background-size: cover;
 }
@@ -60,20 +60,14 @@
 	transition: opacity 0.5s  !important;
 }
 
-.loadingPage{
-	background: url(../img/salad7a.jpg);
-    background-size: cover;
-    -moz-background-size: cover;
-}
-
 .foodBackground{
-	background: url(../img/tempMap.png);
+	background: url(../img/directionPreview.png);
     background-size: cover;
     -moz-background-size: cover;
 }
 
 .profileBackground {
-	background: url(../img/salad8b.jpg);
+	background: url(../img/saladBg5.jpg);
 	background-size: cover;
     -moz-background-size: cover;
 }
@@ -115,10 +109,6 @@ html, body{
     box-shadow: none;
 }
 
-.profileLogo{
-	font-size: 28px;
-}
-
 #searchInput {
     -webkit-transition: width 1s ease;
     -moz-transition: width 1s ease;
@@ -149,23 +139,8 @@ html, body{
   display:         flex;
 }
 
-.voteArrow{
-	font-size:25px;
-}
-
 .tabWidth{
     width:25%;
-}
-
-.floating-action-button{
-	background-color:#5cb85c;
-	border-radius:50%;
-	width:50px;
-	height:50px;
-	text-align:center;
-	margin:10px;
-	font-size:35px;
-	color:whitesmoke;
 }
 
 .noPadding{
@@ -180,10 +155,6 @@ html, body{
 	padding:10px;
 	margin:0px;
 	margin-bottom:30px;
-}
-
-.largeButton{
-	font-size:25px;
 }
 
 .optionsButton{
