@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/simple-sidebar.css" >
+
+		<title>FoodBack</title>
+		
+		<script src="../js/head.js"></script>
+	</head>
+
+    <body>
+        <div class="container-fluid appBackground">
+            <div class="page-header titlePadding" style="margin-bottom:0px">
+                <h3 class="noMargin"><strong>News Feed</strong></h3>
+            </div>
+
+            <ul class="nav nav-tabs">
+   				<li class="active"><a data-toggle="tab" href="#pStories">Popular Stories</a></li>
+    			<li><a data-toggle="tab" href="#funFact">Recommendations</a></li>
+  			</ul>
+
+  			<div class="tab-content">
+    			<div id="pStories" class="tab-pane fade in active">
+
+    				<br>
+					<div class="panel panel-default">
+						<div class="panel-body">
+
+							<div class="row" style="padding-bottom:10px;">
+								<div class="col-xs-3">
+									<img src="../img/profileIcon.png" onclick="window.location.href='profile.html'" class="img-responsive pull-left" style="height:50px;"/>
+								</div>
+
+								<div class="col-xs-5">
+									<div class="row noPadding">
+										<h6 class="noPadding">Marvin</h6>
+									</div>
+
+									<div class="row noPadding">
+										<h6 class="noPadding noMargin">20 followers</h6>
+									</div>
+								</div>
+
+								<div class="col-xs-4">
+									<i class="fa fa-thumbs-up pull-right" style="padding-top:2px"></i>
+									<p class="pull-right" style="padding-right:5px">25</p>
+								</div>
+
+							</div>
+
+							<div class="row">
+								<div class="col-xs-12">
+									<h6>Refreshing and tasty! Would recommend for a healthy meal</h6>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="row">
+										<div class="col-xs-4" style="padding:5px;">
+											<img src="../img/cafePreview2.jpg" class="img-thumbnail img-responsive center-block"/>
+										</div>
+										<div class="col-xs-4" style="padding:5px;">
+											<img src="../img/saladEx1.jpg" class="img-thumbnail img-responsive center-block"/>
+										</div>
+										<div class="col-xs-4" style="padding:5px;">
+											<img src="../img/morePicturesPlaceholder.png" class="img-thumbnail img-responsive center-block"/>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-xs-12">
+
+									<div class="panel panel-default noMargin">
+										<div class="panel-body">
+
+											<div class="row">
+
+												<div class="col-xs-6" onclick="window.location.href='food.html'">
+													<div class="row">
+														<div class="col-xs-12">
+															<h5 class="noMargin"><em>Habitual Fix</em></h5>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-xs-12">
+															<h6><small><em>10 Right Street</em></small></h6>
+														</div>
+													</div>
+												</div>
+
+												<div class="col-xs-6" data-toggle="modal" data-target="#iconDes">
+													<img src="../img/salt.png" class="img-responsive pull-right" style="width:25%; padding:1px; margin-left:2px;"/>
+													<img src="../img/oilBadge.png" class="img-responsive pull-right" style="width:30%; padding:1px; margin-left:2px;"/>
+												</div>
+
+												<div class="modal fade" id="iconDes" role="dialog">
+    												<div class="modal-dialog">
+    
+														<!-- Modal content-->
+														<div class="modal-content">
+															<div class="modal-header">
+																<button type="button" class="close" data-dismiss="modal">&times;</button>
+																<h4 class="modal-title">Badges</h4>
+															</div>
+
+															<div class="modal-body">
+
+																<div class="row">
+																	<div class="col-xs-2">
+																		<img src="../img/oilBadge.png" class="img-responsive center-block"/>
+																	</div>
+																	<div class="col-xs-10">
+																		<h4>Clean oil used</h4>
+																	</div>
+																</div>
+
+																<div class="row">
+																	<div class="col-xs-2">
+																		<img src="../img/salt.png" class="img-responsive center-block"/>
+																	</div>
+																	<div class="col-xs-10">
+																		<h4>Salt only available on request</h4>
+																	</div>
+																</div>
+
+																<hr>
+
+																<div class="row">
+																	<div class="col-xs-2">
+																		<img src="../img/drinkBadge.png" class="img-responsive" style="width:80%; padding-top:5px;"/>
+																	</div>
+																	<div class="col-xs-10">
+																		<h5>No sugary drinks</h5>
+																	</div>
+																</div>
+
+															</div>
+														
+
+															<div class="modal-footer">
+																<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+															</div>
+														</div>
+
+													</div>
+												</div>
+
+
+
+											</div>
+
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+
+				 <div class="panel panel-default">
+						<div class="panel-body">
+
+							<div class="row" style="padding-bottom:10px;">
+								<div class="col-xs-3">
+									<img src="../img/profileIcon.png" onclick="window.location.href='profile.html'" class="img-responsive pull-left" style="height:50px;"/>
+								</div>
+
+								<div class="col-xs-5">
+									<div class="row noPadding">
+										<h6 class="noPadding">Rachel</h6>
+									</div>
+
+									<div class="row noPadding">
+										<h6 class="noPadding noMargin">5 followers</h6>
+									</div>
+								</div>
+
+								<div class="col-xs-4">
+									<i class="fa fa-thumbs-up pull-right" style="padding-top:2px"></i>
+									<p class="pull-right" style="padding-right:5px">10</p>
+								</div>
+
+							</div>
+
+							<div class="row">
+								<div class="col-xs-12">
+									<h6>Reasonable price for a quick and healthy meal!</h6>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="row">
+										<div class="col-xs-4" style="padding:5px;">
+											<img src="../img/cafePreview2.jpg" class="img-thumbnail img-responsive center-block"/>
+										</div>
+										<div class="col-xs-4" style="padding:5px;">
+											<img src="../img/saladEx1.jpg" class="img-thumbnail img-responsive center-block"/>
+										</div>
+										<div class="col-xs-4" style="padding:5px;">
+											<img src="../img/morePicturesPlaceholder.png" class="img-thumbnail img-responsive center-block"/>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-xs-12">
+
+									<div class="panel panel-default noMargin">
+										<div class="panel-body">
+
+											<div class="row">
+
+												<div class="col-xs-6" onclick="window.location.href='food.html'">
+													<div class="row">
+														<div class="col-xs-12">
+															<h5 class="noMargin"><em>Habitual Fix</em></h5>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-xs-12">
+															<h6><small><em>10 Right Street</em></small></h6>
+														</div>
+													</div>
+												</div>
+
+												<div class="col-xs-6" data-toggle="modal" data-target="#iconDes">
+													<img src="../img/salt.png" class="img-responsive pull-right" style="width:25%; padding:1px; margin-left:2px;"/>
+													<img src="../img/oilBadge.png" class="img-responsive pull-right" style="width:30%; padding:1px; margin-left:2px;"/>
+												</div>
+
+
+											</div>
+
+										</div>
+									</div>
+									
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+    			</div>
+
+    			<div id="funFact" class="tab-pane fade in">
+
+					<br>
+					<div class="panel panel-default sharpButton">
+						<div class="panel-body noPadding" onclick="window.location.href='food.html'">
+
+							<div class="row">
+								<div class="col-xs-6">
+									<h4 style="padding-left:5px;"><strong>Habitual Fix</strong></h4>
+								</div>
+
+								<div class="col-xs-6">
+									<h4 class="pull-right" style="padding-right:5px">2 min</h4>
+								</div>
+							</div>
+							<hr class="noMargin">
+
+							<div class="row">
+								<div class="col-xs-12">
+									<img src="../img/habitualFix.jpg" class="img-responsive center-block"/>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+    			</div>
+
+    		</div>
+
+        </div>
+    </body>
+</html>
