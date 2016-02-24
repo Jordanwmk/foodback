@@ -60,8 +60,14 @@
 	transition: opacity 0.5s  !important;
 }
 
-.foodBackground{
-	background: url(../img/directionPreview.png);
+.hFixBG {
+	background: url(../img/habitualFixBG.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+}
+
+.bBunchBG {
+    background: url(../img/burgerBunchBG.jpg);
     background-size: cover;
     -moz-background-size: cover;
 }

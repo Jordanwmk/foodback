@@ -124,9 +124,9 @@
                 <div class="col-xs-6">
                     <div class="dropdown">
                         <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                        <span id="dropdown_title3">None selected</span>
+                        <span id="dropdown_title">None selected</span>
                         <span class="caret"></span></button>
-                        <ul id="divNewNotifications3" class="dropdown-menu">
+                        <ul id="divNewNotifications" class="dropdown-menu">
                         	<li><a href="#">None selected</a></li><hr class="noMargin">
                             <li><a href="#">Distance</a></li>
                             <li><a href="#">Number of badges</a></li>
@@ -147,12 +147,8 @@
         <script>
           $('.dropdown-toggle').dropdown();
 
-            $('#divNewNotifications2 li').on('click', function() {
-                $('#dropdown_title2').html($(this).find('a').html());
-            });
-
-            $('#divNewNotifications3 li').on('click', function() {
-                $('#dropdown_title3').html($(this).find('a').html());
+            $('#divNewNotifications li').on('click', function() {
+                $('#dropdown_title').html($(this).find('a').html());
             });
         </script>
         

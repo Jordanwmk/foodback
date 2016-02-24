@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="col-xs-6">
-                    <input type="text" class="form-control" placeholder="Enter address">
+                    <input type="text" id="currentLocation" class="form-control" placeholder="Enter address">
                 </div>
 
             </div>
@@ -85,22 +85,21 @@
 
             <div class="row">
                 <div class="col-xs-6">
-                    <div class="btn btn-success btn-block" onclick="window.location.href='map.html';">Submit</div>
+                    <div class="btn btn-success btn-block" onclick="window.location.href='nearby.html';">Submit</div>
                 </div>
                 <div class="col-xs-6">
                     <div class="btn btn-danger btn-block" onclick="window.history.back();">Cancel</div>
                 </div>
             </div>
+            <br>
 
+            <div id="map" style="height:35%"></div>
+            <img src="../img/markerList.png" style="width:100%;"/>
+            <h6 style="text-align: center;"><strong>*Drag and drop on your business location</strong></h6>
 
-            <script>
-                $('.dropdown-toggle').dropdown();
-
-
-                $('#divNewNotifications li').on('click', function() {
-                    $('#dropdown_title').html($(this).find('a').html());
-                });
-            </script>
+            <script src="../js/address.js"></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpBd2lvpU8DbDS9tydPHMS2xGP-9jsDLU&signed_in=true&&libraries=places&callback=getLocation"
+                    async defer></script>
 
         </div>
     </body>

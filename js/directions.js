@@ -45,13 +45,13 @@ function createMarker(place) {
 								'<div class="row">' +
 
 									'<div class="col-xs-4" style="padding-right:0px;">' +
-										'<img style="width:50px; height:50px; padding:0px; margin:0px;" src="../img/oilBadge.png"/>' +
+										'<img style="width:40px; height:40px; padding:0px; margin:0px;" src="../img/oilBadge.png"/>' +
 									'</div>' +
 									'<div class="col-xs-4" style="padding-right:0px;">' +
-										'<img style="width:50px; height:50px; padding:0px; margin:0px;" src="../img/salt2.png"/>' +
+										'<img style="width:40px; height:40px; padding:0px; margin:0px;" src="../img/saltBadge.png"/>' +
 									'</div>' +
 									'<div class="col-xs-4">' +
-										'<img style="width:25px; height:25; padding:0px;  padding-top:25px; margin:0px;" src="../img/sugar2.png"/>' +
+										'<img style="width:25px; height:25; padding:0px;  padding-top:15px; margin:0px;" src="../img/sugarBadge.png"/>' +
 									'</div>' +
 
 								'</div>' +

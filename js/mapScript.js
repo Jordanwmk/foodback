@@ -39,10 +39,23 @@ function createMarker(place) {
 		map: map,
 		icon: tempImage
 	});
-	var infoWindowContent = '<p style="padding:0px; margin:0px;" onclick=\"window.location.href=\'food.html\'\">' + place.name + '<br> 5 min&nbsp <i class="fa fa-bicycle"></i>' +
-							'<div class="row"><div class="col-xs-4" style="padding-right:0px;"><img style="width:50px; height:50px; padding:0px; margin:0px;" src="../img/oilBadge.png"/></div>' +
-							'<div class="col-xs-4" style="padding-right:0px;"><img style="width:50px; height:50px; padding:0px; margin:0px;" src="../img/salt2.png"/></div>' +
-							'<div class="col-xs-4"><img style="width:25px; height:25; padding:0px;  padding-top:25px; margin:0px;" src="../img/sugar2.png"/></div></div></p>';
+	var infoWindowContent = '<p style="padding:0px; margin:0px;" onclick=\"window.location.href=\'food.html\'\">' +
+								place.name + '<br> 5 min&nbsp <i class="fa fa-bicycle"></i>' +
+
+								'<div class="row">' +
+
+									'<div class="col-xs-4" style="padding-right:0px;">' +
+										'<img style="width:40px; height:40px; padding:0px; margin:0px;" src="../img/oilBadge.png"/>' +
+									'</div>' +
+									'<div class="col-xs-4" style="padding-right:0px;">' +
+										'<img style="width:40px; height:40px; padding:0px; margin:0px;" src="../img/saltBadge.png"/>' +
+									'</div>' +
+									'<div class="col-xs-4">' +
+										'<img style="width:25px; height:25; padding:0px;  padding-top:15px; margin:0px;" src="../img/sugarBadge.png"/>' +
+									'</div>' +
+
+								'</div>' +
+							'</p>';
 
 	google.maps.event.addListener(marker, 'click', function() {
 		infoWindow.setContent(infoWindowContent);
@@ -102,7 +115,7 @@ function initMap() {
 	//Associate the styled map with the MapTypeId and set it to display.
 	map.mapTypes.set('map_style', styledMap);
 	map.setMapTypeId('map_style');
-	
+
 	initMarker();
 	initInfoWindow();
 	getFoodPlaces();
