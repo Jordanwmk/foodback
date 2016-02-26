@@ -1,4 +1,12 @@
+/*
+ This javascript file is responsible for initializing a map with markers on the user's location and
+ food places around the user. Uses the google.maps.Map object to create the map.
+ */
+
+//Variable that holds a hard coded LatLng object in the event that the device doesn't have the geolocation feature
 var tempLatLng = {lat: -36.8576017, lng: 174.7590294};
+
+//These variables hold the images of the markers for the different types of food places
 var image = '../img/here.png';
 var supermarket = '../img/supermarket.png';
 var fruit = '../img/fruit.png';
@@ -7,9 +15,15 @@ var garden = '../img/garden.png';
 var convenience = '../img/convenience.png';
 var takeaway = '../img/takeaway.png';
 var other = '../img/other.png';
+
+//Array to hold all the markers which will be randomly chosen later
 var markerList = [supermarket, fruit, market, garden, convenience, takeaway, other];
-var zoomAmount = 18;
+
+//Variables that will hold Google Maps components
 var map, marker, infoWindow;
+var zoomAmount = 18;
+
+//Array to hold the styles to apply to the gMap element
 var styles = [
 	{
 		featureType: "poi",
@@ -33,8 +47,13 @@ var styles = [
 		]
 	}
 ];
+
+//This variable will eventually hold the user's location
 var currentLatLng;
 
+/*
+ This function uses the geolocation feature to determine the user's position
+ */
 function initMap() {
 
 	if (navigator.geolocation) {
@@ -42,6 +61,11 @@ function initMap() {
 	}
 }
 
+/*
+ This function creates a Google Map element and embeds the map inside a div in the html file.
+ The map has all points of interests removed except for schools and medical facilities to improve
+ clarity of the map. The map will be populated by markers which indicate a food business.
+ */
 function getLocation(position){
 
 	if (typeof position !== 'undefined'){
@@ -66,6 +90,9 @@ function getLocation(position){
 
 }
 
+/*
+ Creates a marker indicating the location of the user
+ */
 function initMarker(){
 	marker = new google.maps.Marker({
 		position: currentLatLng,
@@ -74,6 +101,10 @@ function initMarker(){
 	});
 }
 
+/*
+ Creates a info window to display a message to the user.
+ The info window will appear on the marker where the user is located
+ */
 function initInfoWindow(){
 	infoWindow = new google.maps.InfoWindow({
 		map: map,
@@ -82,17 +113,26 @@ function initInfoWindow(){
 	infoWindow.open(map, marker);
 }
 
+/*
+ This function searches for all the nearby places of the specified types in the
+ type array passed into the request to the function nearbySearch().
+ The center of the search is the location of the user.
+ */
 function getFoodPlaces(){
 	var service = new google.maps.places.PlacesService(map);
 	service.nearbySearch({
 		location: currentLatLng,
 		radius: 500,
 		types: ['bakery', 'bar' , 'cafe','food',
-			'grocery_or_supermarket', 'hospital', 'meal_delivery' , 'meal_takeaway',
-			'restaurant' , 'school']
+		'grocery_or_supermarket', 'hospital', 'meal_delivery' , 'meal_takeaway',
+		'restaurant' , 'school']
 	}, createFoodMarker);
 }
 
+/*
+ This function takes in an array of places and goes through each element and creates
+ a marker for them which will appear on the map.
+ */
 function createFoodMarker(results, status) {
 	if (status === google.maps.places.PlacesServiceStatus.OK) {
 		for (var i = 0; i < results.length; i++) {
@@ -101,32 +141,38 @@ function createFoodMarker(results, status) {
 	}
 }
 
+/*
+ This function creates a marker for each of the places passed into the function.
+ It chooses the markers randomly from the array of images specified at the top of this file.
+ It attaches an event listener to each marker so that when the user clicks on the marker,
+ an info window opens with the appropriate information about the food place.
+ */
 function createMarker(place) {
 	var randomNumber = Math.floor(Math.random() * (markerList.length));
 	var tempImage = markerList[randomNumber];
-
+	
 	var marker = new google.maps.Marker({
 		position: place.geometry.location,
 		map: map,
 		icon: tempImage
 	});
 	var infoWindowContent = '<p style="padding:0px; margin:0px;" onclick=\"window.location.href=\'food.html\'\">' +
-		place.name + '<br> 5 min&nbsp <i class="fa fa-bicycle"></i>' +
+								place.name + '<br> 5 min&nbsp <i class="fa fa-bicycle"></i>' +
 
-		'<div class="row">' +
+								'<div class="row">' +
 
-		'<div class="col-xs-4" style="padding-right:0px;">' +
-		'<img style="width:40px; height:40px; padding:0px; margin:0px;" src="../img/oilBadge.png"/>' +
-		'</div>' +
-		'<div class="col-xs-4" style="padding-right:0px;">' +
-		'<img style="width:40px; height:40px; padding:0px; margin:0px;" src="../img/saltBadge.png"/>' +
-		'</div>' +
-		'<div class="col-xs-4">' +
-		'<img style="width:25px; height:25; padding:0px;  padding-top:15px; margin:0px;" src="../img/sugarBadge.png"/>' +
-		'</div>' +
+									'<div class="col-xs-4" style="padding-right:0px;">' +
+										'<img style="width:40px; height:40px; padding:0px; margin:0px;" src="../img/oilBadge.png"/>' +
+									'</div>' +
+									'<div class="col-xs-4" style="padding-right:0px;">' +
+										'<img style="width:40px; height:40px; padding:0px; margin:0px;" src="../img/saltBadge.png"/>' +
+									'</div>' +
+									'<div class="col-xs-4">' +
+										'<img style="width:25px; height:25; padding:0px;  padding-top:15px; margin:0px;" src="../img/sugarBadge.png"/>' +
+									'</div>' +
 
-		'</div>' +
-		'</p>';
+								'</div>' +
+							'</p>';
 
 	google.maps.event.addListener(marker, 'click', function() {
 		infoWindow.setContent(infoWindowContent);
